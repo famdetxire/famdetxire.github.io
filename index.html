@@ -152,6 +152,141 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-字符串常用方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/07/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">字符串常用方法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/07/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-06-07T01:51:35.774Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、字符串的连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public String concat(String str)</span><br></pre></td></tr></table></figure>
+
+<p>将参数str添加到调用的字符串后面</p>
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String a&#x3D; &quot;abc&quot;;</span><br><span class="line">String b&#x3D;&quot;egd&quot;;</span><br><span class="line">String string&#x3D;a.concat(b);</span><br><span class="line">System.out.println(string);&#x2F;&#x2F;结果为abcegd</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2、字符串的长度</p>
+<p>public int length()</p>
+<p>计算调用此方法的字符串长度</p>
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a&#x3D; &quot;abc&quot;;</span><br><span class="line">int alength&#x3D;a.length();</span><br><span class="line">System.out.println(alength);&#x2F;&#x2F;结果为3</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3、字符在字符串所在的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public char charAt(int index)</span><br></pre></td></tr></table></figure>
+
+<p>获得字符串指定位置的字符，索引值从0开始到length()-1</p>
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a&#x3D; &quot;abcdedjf&quot;;</span><br><span class="line">char b &#x3D; a.charAt(0);</span><br><span class="line">System.out.println(b);&#x2F;&#x2F;结果为a</span><br></pre></td></tr></table></figure>
+
+
+
+<p>4、截取字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String substring(int beginIndex)</span><br><span class="line"></span><br><span class="line">public String substring(int beginIndex, int endIndex)</span><br></pre></td></tr></table></figure>
+
+<p>截取需要的字符串，两个方法的索引值都是从0开始</p>
+<p>第二种方法是从beginIndex截取到endIndex，截取结果包括beginIndex对应的字符，但不包括iendIndex对应的字符</p>
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a&#x3D; &quot;abcdedjf&quot;;</span><br><span class="line">String b &#x3D; a.substring(0, 3);</span><br><span class="line">System.out.println(b);&#x2F;&#x2F;结果为abc</span><br></pre></td></tr></table></figure>
+
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a&#x3D; &quot;abcdedjf&quot;;</span><br><span class="line">String b &#x3D; a.substring(4, 6);</span><br><span class="line">System.out.println(b);&#x2F;&#x2F;结果为ed</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5、字符串的比较</p>
+<p>  public boolean equals(Object anObject)</p>
+<p>比较两个字符串是否相等，这个方法涉及到hashCode()方法，关于这两个方法的区别，请参考：</p>
+<p><strong><a href="https://www.cnblogs.com/jesonjason/p/5492208.html" target="_blank" rel="noopener">https://www.cnblogs.com/jesonjason/p/5492208.html</a></strong></p>
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a&#x3D; &quot;abcdedjf&quot;;</span><br><span class="line">String b&#x3D;new String(&quot;abcdedjf&quot;);</span><br><span class="line">System.out.println(a.equals(b));&#x2F;&#x2F;结果为true</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6、查找字符，字符串在字符串中的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public int indexOf(int ch)</span><br><span class="line"></span><br><span class="line">public int indexOf(String str)</span><br><span class="line"></span><br><span class="line">public int indexOf(int ch, int fromIndex)</span><br><span class="line"></span><br><span class="line">public int lastIndexOf(int ch)</span><br></pre></td></tr></table></figure>
+
+<p>第一个方法是返回查找字符ch所在的索引值，如果有多个匹配，则会匹配查找第一个字符，返回其索引值</p>
+<p>第二个方法是返回查找字符串str所在的索引值，如果有多个匹配，则会匹配查找第一个字符，返回其索引值</p>
+<p>第三个方法是字符ch在字符串fromindex位后出现的第一个位置，没有找到返加-1</p>
+<p>第四个方法是从后往前返回查找字符ch所在的索引值，如果有多个匹配，则会匹配查找到的第一个字符，返回其索引值</p>
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String a &#x3D; &quot;abcdedjfa&quot;;</span><br><span class="line">int charindex &#x3D; a.indexOf(&#39;a&#39;);</span><br><span class="line">System.out.println(charindex);&#x2F;&#x2F;结果为0</span><br><span class="line">int stringIndex &#x3D; a.indexOf(&quot;cd&quot;);</span><br><span class="line">System.out.println(stringIndex);&#x2F;&#x2F;结果为2</span><br><span class="line">int index &#x3D; a.indexOf(&#39;a&#39;, 5);</span><br><span class="line">System.out.println(index);&#x2F;&#x2F;结果为8</span><br><span class="line">int lastIndex &#x3D; a.lastIndexOf(&#39;a&#39;);</span><br><span class="line">System.out.println(lastIndex);&#x2F;&#x2F;结果为8</span><br></pre></td></tr></table></figure>
+
+
+
+<p> 7、去除字符串中的空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String trim()</span><br><span class="line"></span><br><span class="line">public String replace(CharSequence target, CharSequence replacement)</span><br></pre></td></tr></table></figure>
+
+<p>第一个方法能去除字符串前后的空格，但去除不了字符串中间的空格</p>
+<p>第二个方法可以替换包括首尾和中间的空格</p>
+<p> eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a &#x3D; &quot; abcde djfa &quot;;</span><br><span class="line">String aString &#x3D; a.trim();</span><br><span class="line">System.out.println(aString);&#x2F;&#x2F;结果为abcde djfa</span><br></pre></td></tr></table></figure>
+
+
+
+<p>eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a &#x3D; &quot; abcde djfa &quot;;</span><br><span class="line">String aString &#x3D; a.replace(&quot; &quot;, &quot;&quot;);</span><br><span class="line">System.out.println(aString);&#x2F;&#x2F;结果为abcdedjfa</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/07/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-markdown练手" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
