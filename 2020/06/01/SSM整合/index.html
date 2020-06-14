@@ -15,18 +15,18 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="[TOC] 一、前言1、Spring家族的所有框架都是Spring整合其它框架，即将其它框架整入Spring，将其它框架的管理权交给Spring 2、SSM整合先整合Spring和Mybatis,然后整合Spring和SpringMVC 3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring 4、Spring整合SpringMVC原理：将Sp">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614192916369.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614193044781.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614193616267.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614202423417.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614211522655.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614215059446.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614215149757.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614193044781.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614193616267.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614202423417.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614211522655.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614215059446.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614215149757.png">
 <meta property="article:published_time" content="2020-06-01T09:03:24.695Z">
-<meta property="article:modified_time" content="2020-06-14T13:52:03.513Z">
+<meta property="article:modified_time" content="2020-06-14T14:43:46.497Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88.assets/image-20200614192916369.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/01/SSM%E6%95%B4%E5%90%88/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -188,11 +188,11 @@
 <p>3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring</p>
 <p>4、Spring整合SpringMVC原理：将Spring和SpringMVC各自配置一遍</p>
 <h1 id="二、Spring和Mybatis整合步骤"><a href="#二、Spring和Mybatis整合步骤" class="headerlink" title="二、Spring和Mybatis整合步骤"></a>二、Spring和Mybatis整合步骤</h1><p>1、创建一个Web项目，导入Spring和Mybatis所需的jar包</p>
-<p><img src="SSM%E6%95%B4%E5%90%88.assets/image-20200614192916369.png" alt="image-20200614192916369" title="jar包"></p>
+<p><img src="SSM%E6%95%B4%E5%90%88/image-20200614192916369.png" alt="image-20200614192916369" title="jar包"></p>
 <p>2、创建一个 实体类 和 实体类对应的表</p>
-<img src="SSM整合.assets/image-20200614193044781.png" alt="image-20200614193044781" title="实体类" style="zoom:50%;" />
+<img src="SSM整合/image-20200614193044781.png" alt="image-20200614193044781" title="实体类" style="zoom:50%;" />
 
-<img src="SSM整合.assets/image-20200614193616267.png" alt="image-20200614193616267" title="学生表" style="zoom:67%;" />
+<img src="SSM整合/image-20200614193616267.png" alt="image-20200614193616267" title="学生表" style="zoom:67%;" />
 
 <p>3、将Mybatis的conf.xml文件中的 数据源和mapper.xml路径 配置在Spring的配置文件 applicationContext.xml</p>
 <p>db.properties</p>
@@ -215,7 +215,7 @@
 
 
 <h1 id="三、Spring和SpringMVC整合步骤"><a href="#三、Spring和SpringMVC整合步骤" class="headerlink" title="三、Spring和SpringMVC整合步骤"></a>三、Spring和SpringMVC整合步骤</h1><p>1、加入SpringMVC所需jar包</p>
-<p><img src="SSM%E6%95%B4%E5%90%88.assets/image-20200614202423417.png" alt="image-20200614202423417" title="jar包"></p>
+<p><img src="SSM%E6%95%B4%E5%90%88/image-20200614202423417.png" alt="image-20200614202423417" title="jar包"></p>
 <p>2、给项目加入SpringMVC支持</p>
 <p>web.xml</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置SpringMVC核心类，给项目加入SpringMVC支持 --&gt;</span><br><span class="line">	&lt;servlet&gt;</span><br><span class="line">		&lt;servlet-name&gt;springDispatcherServlet&lt;&#x2F;servlet-name&gt;</span><br><span class="line">		&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;&#x2F;servlet-class&gt;</span><br><span class="line">		&lt;init-param&gt;</span><br><span class="line">			&lt;param-name&gt;contextConfigLocation&lt;&#x2F;param-name&gt;</span><br><span class="line">			&lt;param-value&gt;classpath:applicationContext-controller.xml&lt;&#x2F;param-value&gt;</span><br><span class="line">		&lt;&#x2F;init-param&gt;</span><br><span class="line">		&lt;load-on-startup&gt;1&lt;&#x2F;load-on-startup&gt;</span><br><span class="line">	&lt;&#x2F;servlet&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 让SpringMVC拦截所有请求 --&gt;</span><br><span class="line">	&lt;servlet-mapping&gt;</span><br><span class="line">		&lt;servlet-name&gt;springDispatcherServlet&lt;&#x2F;servlet-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;&#x2F;&lt;&#x2F;url-pattern&gt;</span><br><span class="line">	&lt;&#x2F;servlet-mapping&gt;</span><br></pre></td></tr></table></figure>
@@ -235,7 +235,7 @@
 </li>
 </ul>
 <h1 id="四、简单应用"><a href="#四、简单应用" class="headerlink" title="四、简单应用"></a>四、简单应用</h1><p>注：采用三层架构</p>
-<img src="SSM整合.assets/image-20200614211522655.png" alt="image-20200614211522655" title="三层架构" style="zoom: 33%;" />
+<img src="SSM整合/image-20200614211522655.png" alt="image-20200614211522655" title="三层架构" style="zoom: 33%;" />
 
 
 
@@ -274,9 +274,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置扫描器 --&gt;</span><br><span class="line">&lt;context:component-scan base-package&#x3D;&quot;org.lanqiao.controller&quot;&gt;&lt;&#x2F;context:component-scan&gt;</span><br></pre></td></tr></table></figure>
 
 <p>4、运行测试</p>
-<img src="SSM整合.assets/image-20200614215059446.png" alt="image-20200614215059446" style="zoom: 67%;" />
+<img src="SSM整合/image-20200614215059446.png" alt="image-20200614215059446" style="zoom: 67%;" />
 
-<img src="SSM整合.assets/image-20200614215149757.png" alt="image-20200614215149757" style="zoom:67%;" />
+<img src="SSM整合/image-20200614215149757.png" alt="image-20200614215149757" style="zoom:67%;" />
       
 
       
