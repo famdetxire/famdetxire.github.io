@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>SpringBoot笔记+ | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="SpringBoot三种方式给pojo注值一、在application.properties中进行配置application.properties 12student.name&#x3D;lsstudent.age&#x3D;24">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot笔记+">
+<meta property="og:url" content="http://yoursite.com/2020/06/29/SpringBoot%E7%AC%94%E8%AE%B0+/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="SpringBoot三种方式给pojo注值一、在application.properties中进行配置application.properties 12student.name&#x3D;lsstudent.age&#x3D;24">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-29T12:38:38.000Z">
+<meta property="article:modified_time" content="2020-10-08T06:53:52.192Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="SpringBoot笔记+">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -150,63 +155,200 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SpringBoot笔记+" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-08-12T07:38:30.794Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+    <h1 class="article-title" itemprop="name">
+      SpringBoot笔记+
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/29/SpringBoot%E7%AC%94%E8%AE%B0+/" class="archive-article-date">
+        
+        <a href="/2020/06/29/SpringBoot%E7%AC%94%E8%AE%B0+/" class="archive-article-date">
   	<time datetime="2020-06-29T12:38:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/29/SpringBoot%E7%AC%94%E8%AE%B0+/">SpringBoot笔记+</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SpringBoot三种方式给pojo注值"><a href="#SpringBoot三种方式给pojo注值" class="headerlink" title="SpringBoot三种方式给pojo注值"></a>SpringBoot三种方式给pojo注值</h1><h2 id="一、在application-properties中进行配置"><a href="#一、在application-properties中进行配置" class="headerlink" title="一、在application.properties中进行配置"></a>一、在application.properties中进行配置</h2><p>application.properties</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student.name=ls</span><br><span class="line">student.age=<span class="number">24</span></span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<a id="more"></a>
+
+<h2 id="二、在application-yml中进行配置"><a href="#二、在application-yml中进行配置" class="headerlink" title="二、在application.yml中进行配置"></a>二、在application.yml中进行配置</h2><p>application.yml</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">student:</span><br><span class="line">  name: zs</span><br><span class="line">  age: <span class="number">23</span></span><br><span class="line">  sex: <span class="keyword">true</span></span><br><span class="line">  brithday: <span class="number">2020</span>/<span class="number">6</span>/<span class="number">29</span></span><br><span class="line">  location: #&#123;provience: 江西, city: 南昌, zone: 农大&#125;</span><br><span class="line">    provience: 江西</span><br><span class="line">    city: 南昌</span><br><span class="line">    zone: 农大</span><br><span class="line">  hobbies: #[足球,乒乓球,篮球]</span><br><span class="line">    - 足球<span class="number">2</span></span><br><span class="line">    - 乒乓球<span class="number">2</span></span><br><span class="line">    - 篮球<span class="number">2</span></span><br><span class="line">  skills: #[编程,金融]</span><br><span class="line">    - 编程<span class="number">2</span></span><br><span class="line">    - 金融<span class="number">2</span></span><br><span class="line">  pet: #&#123;nickName: xb, strain: hsq&#125;</span><br><span class="line">    nickName: xb</span><br><span class="line">    strain: hsq</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：以上两种注入方式，需要将给对应的pojo添加注解@ConfigurationProperties，其中prefix为要配的值，这里是student；另外还要将这个pojo加入spring容器，要加上@Component注解。</p>
+<ul>
+<li><p>SpringBoot默认只加载以上两个配置文件，若要加载其他配置文件，则需加上@PropertySource注解</p>
+<ul>
+<li><p>例如:加载conf.properties文件中的数据；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PropertySource</span>(value=&#123;<span class="string">"classpath:conf.properties"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>但是，@PropertySource只能加载properties，不能加载yml</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span><span class="comment">//将javaBean注入spring容器</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"student"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="三、单独给每个值加上-Value注解"><a href="#三、单独给每个值加上-Value注解" class="headerlink" title="三、单独给每个值加上@Value注解"></a>三、单独给每个值加上@Value注解</h2><p>Student.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Value</span>(<span class="string">"ww"</span>)</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="meta">@Value</span>(<span class="string">"25"</span>)</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：@Value里的值无论String还是int都要用双引号引起来</p>
+</blockquote>
+<blockquote>
+<p>注：优先级：application.properties &gt; application.yml &gt; @Value</p>
+</blockquote>
+<blockquote>
+<p>三种注入方式对比</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>@ConfigurationProperties</th>
+<th>@Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>注值</td>
+<td>批量注入</td>
+<td>单个</td>
+</tr>
+<tr>
+<td>松散语法</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>SpEL</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>JSR303数据校验</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>注入复杂类型</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="多环境的切换（profile）"><a href="#多环境的切换（profile）" class="headerlink" title="多环境的切换（profile）"></a>多环境的切换（profile）</h1><blockquote>
+<ul>
+<li>默认boot会读取application.properties环境8888</li>
+</ul>
+</blockquote>
+<h2 id="properties"><a href="#properties" class="headerlink" title="properties"></a>properties</h2><ul>
+<li><p>创建其他环境：</p>
+<ul>
+<li><p>格式：</p>
+<p>​    application-环境名.properties</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Ag: </p>
+<p>application.properties：默认环境–端口号为8888</p>
+<p>application-dev.properties：开发环境–端口号为8886</p>
+<p>application-test.properties：测试环境–端口号为8884</p>
+<p>注：</p>
+<ul>
+<li>切换环境：在application.properties中指定：spring.profiles.active=环境名</li>
+</ul>
+<p>文件名：application.properties</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.profiles.active=dev</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h2 id="yml"><a href="#yml" class="headerlink" title="yml"></a>yml</h2><p>创建其他环境：</p>
+<ul>
+<li><p>格式：</p>
+<p>​    在原yml文件里，用 — 将默认环境与其它环境分隔开</p>
+<p>application.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 8888</span><br><span class="line">spring:</span><br><span class="line">  profiles:</span><br><span class="line">    active: dev #通过 环境名 切换环境</span><br><span class="line">  </span><br><span class="line">---</span><br><span class="line">server:</span><br><span class="line">  port: 8886</span><br><span class="line">spring:</span><br><span class="line">	profiles: dev  #环境名</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">server:</span><br><span class="line">  port: 8884  </span><br><span class="line">spring:</span><br><span class="line">    profiles: test #环境名</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="动态切换环境"><a href="#动态切换环境" class="headerlink" title="动态切换环境"></a>动态切换环境</h2><ul>
+<li>通过运行参数指定环境<ul>
+<li>(1) STS(Eclipse) ：Run Configuration - Argument - program Argument    <pre><code>--spring.profiles.active=环境名</code></pre></li>
+<li>(2) 命令行方式：<pre><code>java -jar 项目名.jar --spring.profiles.active=环境名</code></pre></li>
+<li>(3) 通过vm参数指定环境<pre><code>STS(Eclipse) ：Run Configuration - Argument - VM    
+  -Dspring.profiles.active=环境名</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="配置文件的位置和优先级"><a href="#配置文件的位置和优先级" class="headerlink" title="配置文件的位置和优先级"></a>配置文件的位置和优先级</h2><p>i.项目内部的配置文件：<br>properties和yml中的配置，相互补充；如果冲突，则properties优先级高。<br>spring boot默认能够读取的application.properties/application.yml，这2个文件 可以存在于以下4个地方：<br>file:项目根目录/config         application.properties<br>file:项目根目录            application.properties<br>classpath:项目根目录/config    application.properties<br>classpath:项目根目录        application.properties</p>
+<blockquote>
+<p>注意:<br>a.如果某项配置冲突，则优先级从上往下<br>b.如果不冲突，则互补结合使用</p>
+</blockquote>
+<blockquote>
+<p> 配置访问路径：</p>
+<p>默认访问路径：localhost:/8888/helloworld</p>
+<ul>
+<li><p>配置properties文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">server.servlet.context-path&#x3D;&#x2F;boot</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>配置后：localhost:/8888/boot/helloworld</p>
+</blockquote>
+<hr>
+<p>ii.项目外部的配置文件： (补救)—大量需要修改时用<br>在项目Run configuration ,argumenets:<br>–spring.config.location=D:/application.properties<br>如果 同一个配置 同时存在于 内部配置文件 和外部配置文件，则外部&gt;内部</p>
+<p>HW.jar   运行，8881–8882<br>外部配置文件<br>通过命令行 调用外部配置文件<br>java -jar  项目.jar  –spring.config.location=D:/application.properties</p>
+<hr>
+<p>iii.项目运行参数： (补救)—一两个需要修改时用<br>在项目Run configuration ,argumenets:<br>–server.port=8883<br>通过命令行 调用外部配置文件<br>java -jar  项目.jar  –server.port=8883</p>
+<p>多个地方配置时，如果冲突，优先级：<br>命令参数（运行参数 &gt; 调用外部的配置文件）&gt;内部文件 (properties&gt;yaml)</p>
+<p>官网对多配置时的顺序说明：<a href="https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#boot-features-external-config" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/htmlsingle/#boot-features-external-config</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -218,127 +360,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+    
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/29/SpringBoot%E7%AC%94%E8%AE%B0+/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/15/SSM%E6%95%B4%E5%90%88/" class="archive-article-date">
-  	<time datetime="2020-06-15T03:06:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-15</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/08/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          设计模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/15/SSM%E6%95%B4%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SSM整合</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/15/SSM%E6%95%B4%E5%90%88/">SSM整合</a>
-    </h1>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/07/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-06-07T01:51:35.774Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/07/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">字符串常用方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/01/java%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2020-06-01T09:36:44.907Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/01/java%E5%9F%BA%E7%A1%80/">java基础</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/31/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-31T02:48:56.754Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/31/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -361,8 +491,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
