@@ -6,26 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SSM整合 | Hexo</title>
+  <title>oracle基础 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[TOC]  一、前言1、Spring家族的所有框架都是Spring整合其它框架，即将其它框架整入Spring，将其它框架的管理权交给Spring 2、SSM整合先整合Spring和Mybatis,然后整合Spring和SpringMVC 3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring 4、Spring整合SpringMVC原理：将S">
+  <meta name="description" content="一、查询 1、范围查询：  1、between…（小）and…（大）  注意事项： 1、从小到大：between 10 and 20;&#x2F;&#x2F;从小到大 2、左闭右闭：between 10 and 20;&#x2F;&#x2F;从10到20,包含10也包含20；  eg: select *from emp where sal  between 1000 and 3000;&#x2F;&#x2F;查询emp表,当sal&gt;&#x3D;1000 and">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSM整合">
-<meta property="og:url" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/index.html">
+<meta property="og:title" content="oracle基础">
+<meta property="og:url" content="http://yoursite.com/2020/10/25/oracle%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[TOC]  一、前言1、Spring家族的所有框架都是Spring整合其它框架，即将其它框架整入Spring，将其它框架的管理权交给Spring 2、SSM整合先整合Spring和Mybatis,然后整合Spring和SpringMVC 3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring 4、Spring整合SpringMVC原理：将S">
+<meta property="og:description" content="一、查询 1、范围查询：  1、between…（小）and…（大）  注意事项： 1、从小到大：between 10 and 20;&#x2F;&#x2F;从小到大 2、左闭右闭：between 10 and 20;&#x2F;&#x2F;从10到20,包含10也包含20；  eg: select *from emp where sal  between 1000 and 3000;&#x2F;&#x2F;查询emp表,当sal&gt;&#x3D;1000 and">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614193044781.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614202423417.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614211522655.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215059446.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215149757.png">
-<meta property="article:published_time" content="2020-06-15T03:06:28.000Z">
-<meta property="article:modified_time" content="2020-10-08T07:02:00.102Z">
+<meta property="article:published_time" content="2020-10-25T08:20:16.724Z">
+<meta property="article:modified_time" content="2020-10-25T08:21:56.788Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -161,117 +154,628 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SSM整合" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-oracle基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SSM整合
+      oracle基础
     </h1>
   
 
         
-        <a href="/2020/06/15/SSM%E6%95%B4%E5%90%88/" class="archive-article-date">
-  	<time datetime="2020-06-15T03:06:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-15</time>
+        <a href="/2020/10/25/oracle%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2020-10-25T08:20:16.724Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[TOC]</p>
-<hr>
-<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>1、Spring家族的所有框架都是Spring整合其它框架，即将其它框架整入Spring，将其它框架的管理权交给Spring</p>
-<p>2、SSM整合先整合Spring和Mybatis,然后整合Spring和SpringMVC</p>
-<p>3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring</p>
-<p>4、Spring整合SpringMVC原理：将Spring和SpringMVC各自配置一遍</p>
-<a id="more"></a>
-
-<h1 id="二、Spring和Mybatis整合步骤"><a href="#二、Spring和Mybatis整合步骤" class="headerlink" title="二、Spring和Mybatis整合步骤"></a>二、Spring和Mybatis整合步骤</h1><p>1、创建一个Web项目，导入Spring和Mybatis所需的jar包</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png" alt="image-20200614192916369"></p>
-<p>2、创建一个 实体类 和 实体类对应的表</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614193044781.png" alt="image-20200614193044781"></p>
-<p>3、将Mybatis的conf.xml文件中的 数据源和mapper.xml路径 配置在Spring的配置文件 applicationContext.xml</p>
-<p>db.properties</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">driver&#x3D;oracle.jdbc.OracleDriver</span><br><span class="line">url&#x3D;jdbc:oracle:thin:@127.0.0.1:1521:ORCL</span><br><span class="line">username&#x3D;scott</span><br><span class="line">password&#x3D;tiger</span><br><span class="line">maxActive&#x3D;10</span><br><span class="line">maxIdle&#x3D;6</span><br></pre></td></tr></table></figure>
-
-<p>applicationContext.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 加载db.properties配置文件 --&gt;</span><br><span class="line">	&lt;bean id&#x3D;&quot;config&quot; class&#x3D;&quot;org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer&quot;&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;locations&quot;&gt;</span><br><span class="line">			&lt;array&gt;</span><br><span class="line">				&lt;value&gt;classpath:db.properties&lt;&#x2F;value&gt;</span><br><span class="line">			&lt;&#x2F;array&gt;</span><br><span class="line">		&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br><span class="line">	&lt;!-- 配置数据源 --&gt;</span><br><span class="line">	&lt;bean id&#x3D;&quot;dataSource&quot; class&#x3D;&quot;org.apache.commons.dbcp.BasicDataSource&quot;&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;property name&#x3D;&quot;driverClassName&quot; value&#x3D;&quot;$&#123;driver&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;url&quot; value&#x3D;&quot;$&#123;url&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;username&quot; value&#x3D;&quot;$&#123;username&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;password&quot; value&#x3D;&quot;$&#123;password&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;maxActive&quot; value&#x3D;&quot;$&#123;maxActive&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;maxIdle&quot; value&#x3D;&quot;$&#123;maxIdle&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 在SpringIOC容器中 创建MyBatis的核心类SqlSessionFactory --&gt;</span><br><span class="line">	&lt;bean id&#x3D;&quot;sqlSessionFactory&quot; class&#x3D;&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;property name&#x3D;&quot;dataSource&quot; ref&#x3D;&quot;dataSource&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;!-- 直接通过springIoc配置mapper路径，省略了conf.xml文件 --&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;mapperLocations&quot; value&#x3D;&quot;classpath*:org&#x2F;lanqiao&#x2F;mapper&#x2F;*.xml&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;bean id&#x3D;&quot;mappers&quot; class&#x3D;&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;sqlSessionFactoryBeanName&quot; value&#x3D;&quot;sqlSessionFactory&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;!-- 指定批量产生哪个包的mapper --&gt;</span><br><span class="line">		&lt;!-- 将对应包内的接口，纳入springIoc容器中 生成动态代理对象，如果要引用该接口产生的动态代理对象</span><br><span class="line">			则通过id值引用，且该id值默认为 首字母小写的接口名</span><br><span class="line">		 --&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;basePackage&quot; value&#x3D;&quot;org.lanqiao.mapper&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
-
-<p>4、创建mapper.xml映射文件，将类和表建立映射关系;同时创建对应的Mapper接口，以便产生动态代理对象；且两者应该放在同一个包里</p>
-<p>mapper.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper </span><br><span class="line">SYSTEM &quot;C:&#x2F;&#x2F;Users&#x2F;&#x2F;HeiQi&#x2F;&#x2F;Desktop&#x2F;&#x2F;MyBatis配套资料&#x2F;&#x2F;mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;mapper namespace&#x3D;&quot;org.lanqiao.mapper.StudentMapper&quot;&gt;</span><br><span class="line">	&lt;select id&#x3D;&quot;queryStudentByStuno&quot; parameterType&#x3D;&quot;int&quot; resultType&#x3D;&quot;org.lanqiao.entity.Student&quot;&gt;</span><br><span class="line">		select * from student where stuno &#x3D; #&#123;stuNo&#125;</span><br><span class="line">	&lt;&#x2F;select&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;insert id&#x3D;&quot;addStudent&quot; parameterType&#x3D;&quot;org.lanqiao.entity.Student&quot;&gt;</span><br><span class="line">		insert into Student(stuno,stuname,stuage) values(#&#123;stuNo&#125;,#&#123;stuName&#125;,#&#123;stuAge&#125;) </span><br><span class="line">	&lt;&#x2F;insert&gt;</span><br><span class="line">&lt;&#x2F;mapper&gt;</span><br></pre></td></tr></table></figure>
-
-<p>studentMapper.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">package org.lanqiao.mapper;</span><br><span class="line"></span><br><span class="line">import org.lanqiao.entity.Student;</span><br><span class="line"></span><br><span class="line">public interface StudentMapper &#123;</span><br><span class="line">	void addStudent(Student student);</span><br><span class="line">	Student queryStudentByStuno(int stuNo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>5、以上已经将Mybatis整合入Spring中，现在将Spring纳入web项目中：这里可以通过Alt+/，再按上方向键快速找到ContextLoaderListener，在将param-value标签内修改为Spring配置文件在项目中的相对路径，其中 ，classpath相当于src下</p>
-<p>web.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 将spring配置文件纳入web项目 ，ContextLoaderListener--&gt;</span><br><span class="line">&lt;context-param&gt;</span><br><span class="line">	&lt;param-name&gt;contextConfigLocation&lt;&#x2F;param-name&gt;</span><br><span class="line">	&lt;param-value&gt;classpath:applicationContext.xml&lt;&#x2F;param-value&gt;</span><br><span class="line">&lt;&#x2F;context-param&gt;</span><br><span class="line">&lt;listener&gt;</span><br><span class="line">	&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;&#x2F;listener-class&gt;</span><br><span class="line">&lt;&#x2F;listener&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="三、Spring和SpringMVC整合步骤"><a href="#三、Spring和SpringMVC整合步骤" class="headerlink" title="三、Spring和SpringMVC整合步骤"></a>三、Spring和SpringMVC整合步骤</h1><p>1、加入SpringMVC所需jar包</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614202423417.png" alt="image-20200614202423417"></p>
-<p>2、给项目加入SpringMVC支持</p>
-<p>web.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置SpringMVC核心类，给项目加入SpringMVC支持 --&gt;</span><br><span class="line">	&lt;servlet&gt;</span><br><span class="line">		&lt;servlet-name&gt;springDispatcherServlet&lt;&#x2F;servlet-name&gt;</span><br><span class="line">		&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;&#x2F;servlet-class&gt;</span><br><span class="line">		&lt;init-param&gt;</span><br><span class="line">			&lt;param-name&gt;contextConfigLocation&lt;&#x2F;param-name&gt;</span><br><span class="line">			&lt;param-value&gt;classpath:applicationContext-controller.xml&lt;&#x2F;param-value&gt;</span><br><span class="line">		&lt;&#x2F;init-param&gt;</span><br><span class="line">		&lt;load-on-startup&gt;1&lt;&#x2F;load-on-startup&gt;</span><br><span class="line">	&lt;&#x2F;servlet&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 让SpringMVC拦截所有请求 --&gt;</span><br><span class="line">	&lt;servlet-mapping&gt;</span><br><span class="line">		&lt;servlet-name&gt;springDispatcherServlet&lt;&#x2F;servlet-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;&#x2F;&lt;&#x2F;url-pattern&gt;</span><br><span class="line">	&lt;&#x2F;servlet-mapping&gt;</span><br></pre></td></tr></table></figure>
-
-<p>3、编写SpringMVC配置文件applicationContext-Controller.xml</p>
+        <h1 id="一、查询"><a href="#一、查询" class="headerlink" title="一、查询"></a>一、查询</h1><ul>
+<li><p>1、范围查询：</p>
 <ul>
-<li><p>配置视图解析器</p>
-<p>applicationContext-Controller.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置视图解析器 --&gt;</span><br><span class="line">&lt;bean class&#x3D;&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;</span><br><span class="line">	&lt;property name&#x3D;&quot;prefix&quot; value&#x3D;&quot;&#x2F;views&#x2F;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;property name&#x3D;&quot;suffix&quot; value&#x3D;&quot;.jsp&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>SpringMVC的基本配置 、标配</p>
-<p>applicationContext-Controller.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;mvc:annotation-driven&gt;&lt;&#x2F;mvc:annotation-driven&gt;</span><br></pre></td></tr></table></figure>
-
-
-
+<li><p>1、between…（小）and…（大）</p>
+<blockquote>
+<p>注意事项：</p>
+<p>1、从小到大：between 10 and 20;//从小到大</p>
+<p>2、左闭右闭：between 10 and 20;//从10到20,包含10也包含20；</p>
+<blockquote>
+<p>eg: select *from emp where sal  between 1000 and 3000;//查询emp表,当sal&gt;=1000 and sal &lt;=3000;</p>
+</blockquote>
+<p>3、between的元素一般为数字，也可以是日期</p>
+<blockquote>
+<p>eg:select *from emp where hiredate  between ‘1981-02-22’ and ‘1982-01-23’;</p>
+</blockquote>
+</blockquote>
 </li>
 </ul>
-<h1 id="四、简单应用"><a href="#四、简单应用" class="headerlink" title="四、简单应用"></a>四、简单应用</h1><p>注：采用三层架构</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614211522655.png" alt="image-20200614211522655"></p>
-<p>1、service层</p>
-<ul>
-<li>创建service类，接口这里省略展示:StudentServiceImpl.java</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package org.lanqiao.service.impl;</span><br><span class="line"></span><br><span class="line">import org.lanqiao.entity.Student;</span><br><span class="line">import org.lanqiao.mapper.StudentMapper;</span><br><span class="line">import org.lanqiao.service.StudentService;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line">public class StudentServiceImpl implements StudentService&#123;</span><br><span class="line">	private StudentMapper studentMapper;&#x2F;&#x2F;通过Spring产生对象</span><br><span class="line">	public void setStudentMapper(StudentMapper studentMapper) &#123;&#x2F;&#x2F;采用set注入，因此需添加set方法</span><br><span class="line">		this.studentMapper &#x3D; studentMapper;</span><br><span class="line">	&#125;</span><br><span class="line">	@Override</span><br><span class="line">	public void addStudent(Student student) &#123;</span><br><span class="line">		studentMapper.addStudent(student);</span><br><span class="line">	&#125;</span><br><span class="line">	@Override</span><br><span class="line">	public Student queryStudentByStuno(int stuNo) &#123;</span><br><span class="line">		return studentMapper.queryStudentByStuno(stuNo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>将StudentServiceImpl注入Ioc容器：applicationContext.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id&#x3D;&quot;studentService&quot; class&#x3D;&quot;org.lanqiao.service.impl.StudentServiceImpl&quot;&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;studentMapper&quot; ref&#x3D;&quot;studentMapper&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
 </ul>
-<p>2、UI层-前端jsp</p>
-<p>index.jsp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language&#x3D;&quot;java&quot; contentType&#x3D;&quot;text&#x2F;html; charset&#x3D;UTF-8&quot;</span><br><span class="line">    pageEncoding&#x3D;&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;a href&#x3D;&quot;controller&#x2F;queryStudentByNo&#x2F;1&quot; &gt;查询1号学生&lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>/views/result.jsp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language&#x3D;&quot;java&quot; contentType&#x3D;&quot;text&#x2F;html; charset&#x3D;UTF-8&quot;</span><br><span class="line">    pageEncoding&#x3D;&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	$&#123;requestScope.student.stuNo &#125;-</span><br><span class="line">	$&#123;requestScope.student.stuName &#125;-</span><br><span class="line">	$&#123;requestScope.student.stuAge &#125;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3、UI层-后端Servlet(控制器Controller)</p>
-<ul>
-<li>控制器：studentController.java（注解需要配置扫描器，才能够识别；@Controller已经将StudentController注入Ioc容器中，切记别在Spring配置文件中再次 注入）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package org.lanqiao.controller;</span><br><span class="line"></span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">import org.lanqiao.entity.Student;</span><br><span class="line">import org.lanqiao.mapper.StudentMapper;</span><br><span class="line">import org.lanqiao.service.StudentService;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Controller;</span><br><span class="line">import org.springframework.web.bind.annotation.PathVariable;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Controller&#x2F;&#x2F;注解需要配置扫描器，才能够识别</span><br><span class="line">		  &#x3D;&#x3D;&#x2F;&#x2F;@Controller已经将StudentController注入Ioc容器中，切记别在Spring配置文件中再次 注入&#x3D;&#x3D;</span><br><span class="line">@RequestMapping(&quot;controller&quot;)</span><br><span class="line">public class StudentController &#123;</span><br><span class="line">	@Autowired&#x2F;&#x2F;通过注解的形式，注入属性</span><br><span class="line">	StudentService studentService;</span><br><span class="line">	</span><br><span class="line">	public void setStudentService(StudentService studentService) &#123;</span><br><span class="line">		this.studentService &#x3D; studentService;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@RequestMapping(&quot;queryStudentByNo&#x2F;&#123;stuNo&#125;&quot;)</span><br><span class="line">	public String queryStudentByNo(@PathVariable(&quot;stuNo&quot;) Integer stuNo,Map&lt;String,Object&gt; map) &#123;</span><br><span class="line">		Student student &#x3D; studentService.queryStudentByStuno(stuNo);</span><br><span class="line">		map.put(&quot;student&quot;, student);</span><br><span class="line">		System.out.println(student.getStuNo()+&quot;-&quot;+student.getStuName()+&quot;-&quot;+student.getStuAge());</span><br><span class="line">		return &quot;result&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <a id="more"></a>
 
 <ul>
-<li>配置扫描器：applicationContext-Controller.xml</li>
+<li><p>2、在范围查询中使用not in 时，不能出现null，举例</p>
+<blockquote>
+<p>eg:select *from emp where comm not in(300,500);//正确，查询结果没有300和500，同时也自动剔除了null；</p>
+<p>eg:select *from emp where comm not in(300,500,null);//错误，查询结果为未选定行，也就查询失败，所以not in中不能出现null</p>
+</blockquote>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置扫描器 --&gt;</span><br><span class="line">&lt;context:component-scan base-package&#x3D;&quot;org.lanqiao.controller&quot;&gt;&lt;&#x2F;context:component-scan&gt;</span><br></pre></td></tr></table></figure>
-
-<p>4、运行测试</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215059446.png" alt="image-20200614215059446"></p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215149757.png" alt="image-20200614215149757"></p>
+<ul>
+<li><p>2、模糊查询（也属于范围查询）：</p>
+<ul>
+<li><p>1、like:一般配合通配符使用</p>
+<blockquote>
+<p>eg:select empno,ename,job from emp where ename like ‘%L%’;//查询ename中包含’L’的记录</p>
+<p>其中，‘%L%’表示L前面和后面都有任意个任意字符</p>
+</blockquote>
+<ul>
+<li><p>like的其他使用：处理模糊查询字符串，也可以模糊查询日期和数字</p>
+<blockquote>
+<p>eg(日期模糊)：select empno,ename,job,hiredate from emp where hiredate like  ‘___1%’;</p>
+<p>eg(数字模糊)：select empno,ename,job,hiredate from emp where empno like  ‘%9%’;</p>
+</blockquote>
+</li>
+<li><p>使用like实现通过长处查询：如,查询姓名长度&gt;=5的员工，</p>
+<blockquote>
+<p>eg:select empno,ename,job,hiredate from emp where ename like ‘_____%’;//模糊查询中，有五个_，表示至少有五个字符，再加上表示任意个字符的%，即ename长度&gt;=5；</p>
+</blockquote>
+</li>
+<li><p>使用like查询字符串中包含_(下划线)：使用转义字符，转义字符通过escape设置，如：escape ‘\‘,将’\‘设置为转义字符；</p>
+<blockquote>
+<p>eg:select *from emp where ename like ‘%\_%’ escape ’\‘；//表示查询ename中包含_的ename</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>2、通配符：</p>
+<ul>
+<li>_:表示一个任意字符</li>
+<li>%:表示任意个任意字符</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3、排序:order by 字段名||序号（即字段的列号，第几列）||表达式（对字段进行运算，意义不大）</p>
+<blockquote>
+<p>eg:select *from emp order by sal;//默认是升序</p>
+<p>eg:select *from emp order by sal desc;//按降序排序</p>
+<p>eg:select *from emp order by sal asc;//也是按降序排序</p>
+<p>注意事项：在排序过程中常常遇到null，null默认是最大值</p>
+<p>优化：降序排序时，null是排在前面的，可将其放到最后去，使用 nulls last;</p>
+<p>eg:select *from emp order by sal desc nulls last;</p>
+</blockquote>
+<ul>
+<li><p>多列排序：先根据某一个字段排序，再根据另外一个字段排序</p>
+<blockquote>
+<p>eg:select *from emp order by sal,hiredate desc;//先根据sals排升序，如果sal相同，就根据hiredate排降序</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="二、函数"><a href="#二、函数" class="headerlink" title="二、函数"></a>二、函数</h1><ul>
+<li><p>1、单行函数：一次性操作一行，一行一行处理；操作一行，返回一行；操作多行，返回多行；</p>
+<blockquote>
+<p>eg:select select lower(job) from emp;//将每一行job变为小写，操作多行，结果也为多行</p>
+</blockquote>
+<ul>
+<li><p>常见的单行函数：</p>
+<ul>
+<li><p>1、字符函数：</p>
+<ul>
+<li><p>lower(单词变小写）、upper(单词变大写）、initcap（将每个单词的首字母变为大写）</p>
+<blockquote>
+<p>eg:select    ‘HeLLo WorLD’ 一，upper(‘HeLLo WorLD’) 二，lower(‘HeLLo WorLD’) 三，initcap(‘HeLLo WorLD’) 四 from dual;</p>
+</blockquote>
+</li>
+<li><p>substr:截取字符串substr(‘helloworld’,begin,len),截取该字符串，从begin开始截取len个字符，且从1开始数，即h为1开始，</p>
+<blockquote>
+<p>eg:select substr(‘helloworld’,3,4) from dual;//结果为llow</p>
+</blockquote>
+</li>
+<li><p>length:获取字符串包含的字符个数；lengthb:获取字符串所占的字节数</p>
+<blockquote>
+<p>eg:select length(‘helloworld’),lengthb(‘helloworld’) from dual;//结果都为10，因为每个字母类字符都只占一个字节</p>
+</blockquote>
+</li>
+<li><p>insrt(str,substr):在str中找substr所在的位置，找不到则返回0；</p>
+<blockquote>
+<p>select instr(‘helloworld’,’llo’) from dual;//结果为3</p>
+</blockquote>
+</li>
+<li><p>lpad:左填充；rpad:右填充;lpad(‘字符串A’，n,’字符串B’)，在字符串A中，往左填充字符串B,直到满n个字节</p>
+<blockquote>
+<p>eg:select lpad(‘hello’,10,’<em>&#39;), rpad(‘hello’,10,’\</em>‘)  from dual;</p>
+</blockquote>
+</li>
+<li><p>trim：去掉任意字符，默认去掉左右空格,trim(‘X’ from ‘XXXXXXhello worldXXXX’),把X从字符串的两边去掉</p>
+<blockquote>
+<p>eg:select trim(‘  helloworld    ‘) from dual;</p>
+<p>eg:select trim(‘X’ from ‘XXXXXXhello worldXXXX’) from dual;</p>
+</blockquote>
+</li>
+<li><p>replace：替换，replace(‘hello’,’l’,’*‘);,将字符串‘hello’中的‘l’都替换成‘*‘;</p>
+<blockquote>
+<p>eg:select replace(‘hello’,’l’,’*‘)  from dual;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>2、数值函数</p>
+<ul>
+<li><p>round(数字，n位数)：四舍五入，数字保留n位小数</p>
+<blockquote>
+<p>eg:select round(67.182,2),round(67.182,1),</p>
+<p>round(67.182,0),round(67.182,-1),round(67.182,-2) from dual;//结果分别为67.18、67.2、67、70、100</p>
+</blockquote>
+</li>
+<li><p>trunc(数字，n位数):舍尾，保留数字n位小数，不进行四舍五入</p>
+</li>
+<li><p>mod(被除数，除数)：求余mod(13,3)</p>
+<blockquote>
+<p>eg:select mod(13,3) from dual;//求余结果为1；</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>3、日期函数</p>
+<ul>
+<li><p>sysdate【这是关键字，不是函数】:当前时间；</p>
+</li>
+<li><p>to_char(日期，格式)：日期格式化</p>
+<blockquote>
+<p>eg:select to_char(sysdate,’yyyy-MM-dd’);</p>
+</blockquote>
+</li>
+<li><p>日期的计算：日期和数字可以随意加减，一般为加减天数，日期和日期只能减，不能加；</p>
+</li>
+<li><p>add_months(日期，月数）:加月；</p>
+<blockquote>
+<p>eg:select add_months(sysdate,2) from dual;//当前日期加两个月</p>
+</blockquote>
+</li>
+<li><p>last_day(日期)：获取日期的月份当月最大天数，月就是这个月有多少天</p>
+<blockquote>
+<p>eg:select last_day(sysdate) from dual;</p>
+</blockquote>
+</li>
+<li><p>next_day(日期)：当前日期下一个 星期n 是第哪一天；</p>
+<blockquote>
+<p>eg:select next_day(sysdate,’星期五’) from dual;</p>
+<p>注：引号里默认为星期几，所以一定要写星期五，而不能写周五</p>
+</blockquote>
+</li>
+<li><p>months_between(日期1，日期2)：计算日期1和日期2相差的具体天数，并且考虑到每个月不同天数。日期大的放左边，小的放右边</p>
+</li>
+<li><p>round(日期，’year、month、day‘):对年、月、日进行四舍五入；</p>
+<blockquote>
+<p>eg:select round(sysdate,’month’),round(sysdate,’year’) from dual;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>4、通用函数</p>
+<ul>
+<li><p>nvl:nvl(相当于if语句)；nvl(a字段,0):如果为a字段为null，则设置为0;</p>
+</li>
+<li><p>nvl2:nvl2(相当于if…else语句)；nvl2(a字段,1000,0):如果a字段为null，则设置为0，否则设置为1000;</p>
+</li>
+<li><p>nullif(a,b):判断两个值是否相同，相同则返回null,不一样则返回a;</p>
+</li>
+<li><p>coalesce:从左往右找，找到第一个不为null的数据，找到就返回；</p>
+<blockquote>
+<p>eg: select comm,sal, coalesce(comm,sal)  from emp;</p>
+</blockquote>
+</li>
+<li><p>条件判断函数：</p>
+<ul>
+<li><p>1、decode(操作字段，条件1，执行语句1，条件2，执行语句2,执行语句3，…)； 条件1成立执行语句1，条件2成立执行语句2，都不成立，执行语句3；</p>
+<blockquote>
+<p>eg:select ename,job,sal 涨前,</p>
+<p>decode(job,’PRESIDENT’,sal+1000,’MANAGER’,sal+500,sal+300) 涨后 from emp;</p>
+</blockquote>
+</li>
+<li><p>2、case 操作字段 when 条件 1then 执行语句1 when 条件2 then 执行语句2 else 执行语句3 end;</p>
+<blockquote>
+<p>eg:select job,sal 涨前， case job </p>
+<p>when ‘PRESIDENT’ then sal+1000</p>
+<p>when ‘MANAGER’ then sal+500</p>
+<p>else sal+300</p>
+<p>end 涨后</p>
+<p>from emp;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5、转换函数</p>
+<ul>
+<li><p>1、隐式转换（自动转换）：在执行语句的过程中，有些类型可以进行一定的自动转换，字符转为数字、数字转为字符</p>
+<blockquote>
+<p>eg:select *from emp where empno = 7788;//一般语句，执行成功</p>
+<p>比较：select *from emp where empno = ’7788‘；//执行依然成功，进行了隐式转换，将’7788‘字符转为了数字7788，查询成功；</p>
+</blockquote>
+</li>
+<li><p>2、显示转换：所有类型都可以转为char类型，除了char类型，其他字符要相互转，都需要先转为char类型；显示转换函数格式一般为to_number、to_char、to_date这种形式</p>
+<blockquote>
+<p>eg:select to_number(‘￥123,456.7’,’L999,999.9’) from dual;//根据转换规则表格，￥——L,数字——9，,——千位符（，）,.——小数点（.);转换的时候要一一对应，不多不少。</p>
+<p>eg: select to_char(1234567,’L999,999,9’) from dual;//将数字转换成字符串；</p>
+<p>eg:select to_date(‘2020-08-28’,’yyyy-mm-dd’) from dual;//将字符串转为date;</p>
+<p>eg:select to_number(to_char(sysdate,’yyyy,mm,dd’),’9999,99,99’)  from dual;//将日期转为字符串，载转为数字；</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2、多行函数（别名：组函数、聚合函数）：一次性操作多行，多行处理；操作多，返回一行</p>
+<blockquote>
+<p>eg:select count(*) from enp;//获取表的数据总数，操作多行，结果只有一行</p>
+</blockquote>
+<ul>
+<li><p>count：计算目标有几条数据</p>
+<blockquote>
+<p>eg:select count(*) from emp;</p>
+<p>eg: select count(distinct deptno) from emp;//去重后，查询有几条数据，即查询有几个部门编号deptno；</p>
+<p>注:count会自动排除null，比如count（comm)，comml里的null会被排除，然后返回数据有几条；</p>
+</blockquote>
+</li>
+<li><p>sum、max、min、avg：分别为计算总数、获取最大、获取最小、计算平均</p>
+<blockquote>
+<p>eg: select count(*) 员工总数，sum(sal) 总工资，max(sal) 最大工资，min(sal) 最少工资，avg(sal) 平均工资 from emp;</p>
+</blockquote>
+</li>
+<li><p>group by;分组，将数据按某个字段进行分组；</p>
+<blockquote>
+<p>eg: select deptno from emp group by deptno;//将查询结果按部门分组，相同的同一组；</p>
+<p>eg:select deptno,avl(sal) from group by deptno;//不在组函数（多行函数）中的列一定要在group by 后面；</p>
+<p>eg:select deptno,job,avg(sal) from emp group by deptno,job order by deptno desc;//多次分组，先根据deptno分组,再根据job分组；</p>
+<p>注意事项：分完组之后选择关键字是having（未分组前是where），且只有在having后面才能使用像avl()这样的组函数，在where后面不能使用</p>
+<p>eg：select deptno,job,avg(sal) from emp group by deptno,job Having avg(sal)&gt;=2000 order by deptno desc;//分组之后，选择avg(sal)大于2000的组；且只有在having里才能使用像avl这样的组函数，在where中不能使用</p>
+</blockquote>
+</li>
+<li><p>group by rollup：增强分组</p>
+<blockquote>
+<p>eg:select deptno,job,sum(sal) from emp group by rollup(deptno,job);</p>
+<p>注：效果等同于分别以（deptno,job)分组+以（deptno)分组+不分组三种方式的集合取并集union；</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="三、DML操作语言"><a href="#三、DML操作语言" class="headerlink" title="三、DML操作语言"></a>三、DML操作语言</h1><ul>
+<li><p>一、insert：</p>
+<ul>
+<li><p>1、insert into 表名（字段1，字段2…） values(字段值1，字段值2…);</p>
+<blockquote>
+<p>注：此种方式的优点是可以不插入所有字段，只插入部分字段；</p>
+</blockquote>
+</li>
+<li><p>2、insert into 表名 values(字段值1，字段值2…);</p>
+<blockquote>
+<p>注：此种方式的优点是语句更为简洁，但要插入完整的所有字段，且必须按表的字段顺序插入</p>
+</blockquote>
+</li>
+<li><p>3、批量插入数据</p>
+<ul>
+<li><p>1、创建新表：将旧表的数据快速插入到新表中</p>
+<blockquote>
+<p>eg:create table mytab as select * from emp;//通过旧表创建新表，并将旧表的数据都复制到新表里</p>
+<p>eg:create table mytab2 as select empno,ename,job from emp ;//通过旧表创建新表部分结构；</p>
+<p>注：快速创建表结构</p>
+<p>eg:create table mytabl3 as select * from emp where 1=0;//新表复制旧表结构，但不包含数据，</p>
+</blockquote>
+</li>
+<li><p>2、在旧表中插入：在已有新表的情况下，通过旧表对新表进行插入；</p>
+<blockquote>
+<p>eg:insert into mytab3(empno,ename,job) select empno,ename.job from emp;//将emp表的三个字段的数据批量插入到mytab3表；</p>
+</blockquote>
+</li>
+<li><p>3、begin…end（事务）：事务的方式批量插入，将多条插入操作放在事务里</p>
+<blockquote>
+<p>eg:begin </p>
+<p>​        insert into mytab3(empno,ename,job)values(1221,’wangwu’,’CLERK’);</p>
+<p>​        insert into mytab3(empno,ename,job)values(2344,’zhaoliu’,’CLERK’);</p>
+<p>end;</p>
+<p>/</p>
+</blockquote>
+</li>
+<li><p>4、海量数据插入：数据泵、SQL Loader、外部表来实现</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>二、动态操作：执行sql语句的时候先不确定执行的具体内容，使用占位符&amp;进行占位，等到执行后，输入 具体的执行字段或字段值；</p>
+<blockquote>
+<p>eg:insert into &amp;biao(&amp;empno,&amp;ename,&amp;job)values(&amp;empno,&amp;ename,&amp;job);</p>
+</blockquote>
+</li>
+<li><p>三、delete:delete from 表名 where 字段名 = 字段值；</p>
+<ul>
+<li><p>1、一般delete都要加where语句，不然会吧整张表删除，且</p>
+</li>
+<li><p>2、delete from 表名；from前面没有*；</p>
+</li>
+<li><p>3、全表删除（删除速度）：</p>
+<blockquote>
+<p>打开/关闭执行时间：set timing on/off;//on,打开时间；off,关闭时间</p>
+</blockquote>
+<ul>
+<li><p>1、delete from 表名：可以回退，DML操作语言，只有DML操作才能回退</p>
+<ul>
+<li>删除方式：一条一条数据删除；</li>
+<li>效率：少量数据是删除相对较快，大量数据删除是相对慢</li>
+</ul>
+</li>
+<li><p>2、truncate table 表名；不能回退，DDL定义操作，所以不能 回退</p>
+<ul>
+<li>删除方式：先将整张表删除，再创建表</li>
+<li>效率：少量数据是删除相对较慢，大量数据删除是相对快</li>
+</ul>
+</li>
+<li><p>3、delete支持闪回，truncate不支持闪回；</p>
+</li>
+<li><p>4、delete不会释放空间（换个地方存储数据[undo空间]）,相当于放在回收站了</p>
+<p>​    truncate会释放空间，相当于放在回收站后再清空回收站；</p>
+</li>
+<li><p>5、delete会产生碎片，delete删除某条数据后，会使存储空间出现很小的存储空缺，也叫碎片；如果碎片太多，需要整碎片</p>
+<blockquote>
+<p>解决方法：1、alter table 表名 move;//将碎片自动整理合并；</p>
+<p>​                    2、将原表导的数据出到新表里，这样新表里就没有碎片，再讲新表的数据导会原表；</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>四、update:update 表名 set 字段名1=字段值1，字段名2=字段值2…where…</p>
+<blockquote>
+<p>注：一般而言，update都要加where语句，不然同样会修改整张表</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="四、DDL定义语言"><a href="#四、DDL定义语言" class="headerlink" title="四、DDL定义语言"></a>四、DDL定义语言</h1><ul>
+<li><p>1、create——创建表 :create table 表名（字段名1 字段类型1，字段名2 字段类型2，…)</p>
+<blockquote>
+<p>eg：create table mytab2(id number,name varchar(10),age number);//创建有三个字段的mytab2表；</p>
+<p>注意事项：</p>
+<p>1、权限和空间问题</p>
+<p>2、表名的规定：</p>
+<ul>
+<li><p>a.必须以字母开头</p>
+</li>
+<li><p>b.表名只能包含：大小写字母、数字、_、$、#</p>
+</li>
+<li><p>c.长度 1-30个字符</p>
+</li>
+<li><p>d.不能与数据库中其他对象重名（表、视图、索引、触发器、存储过程…)</p>
+</li>
+<li><p>e.不能与 保留字重名</p>
+<blockquote>
+<p>查看保留字：登入DBA账户，即管理员账户</p>
+<p>登入DBA账户：sqlplus / as sysdba</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>2、alter——修改表：</p>
+<ul>
+<li><p>1、追加新列（字段）：alter table mytab2 add weight number;//给mytab2表追加了类型为number的weight列（字段）；</p>
+</li>
+<li><p>2、修改列（字段）：原字段 weight number;</p>
+<ul>
+<li>a:修改列（字段）的类型：alter table mytab2 modify weight varchar(10);</li>
+<li>b:修改列（字段）类型的长度：alter table mytab2 modify weight varchar(20);</li>
+</ul>
+<blockquote>
+<p>注意事项：blob和clob不能修改，如果要改就需要先删此列，再追加</p>
+<p>eg：alter table mytab2 drop column  weight;//将weight列删除了</p>
+</blockquote>
+<ul>
+<li>c、修改列（字段）的名：alter table mytab2 rename column  weight to weithts;//将weight改为了weights</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3、drop——删除表：drop table 表名；删除表不会完全删除，而是将表放到表回收站里，回收站可查看、清空和还原；</p>
+<ul>
+<li>1、查看回收站：show recyclebin;</li>
+<li>2、清空回收站:   purge recyclebin;</li>
+<li>3、还原回收站:    闪回技术；</li>
+<li>4、永久删除：drop table 表名 purge;//删除表并清空</li>
+</ul>
+</li>
+</ul>
+<h1 id="五、内连接、外连接、自连接、层次连接"><a href="#五、内连接、外连接、自连接、层次连接" class="headerlink" title="五、内连接、外连接、自连接、层次连接"></a>五、内连接、外连接、自连接、层次连接</h1><ul>
+<li><p>交叉连接（笛卡尔积）：匹配两张表的所有可能，将表1的每一条数据与表2的每一条数据组合，一般不单独使用，意义不大；</p>
+<blockquote>
+<p>eg:select e.empno,e.ename,e.deptno,d.deptno,d.dname from emp e,dept d;//没有连接条件</p>
+</blockquote>
+</li>
+<li><p>内连接：多张表通过相同字段匹配，匹配成功的保留，显示；</p>
+<ul>
+<li><p>第一种写法：使用where 实现；</p>
+<blockquote>
+<p>eg:select e.empno,e.ename,e.deptno,d.deptno,d.dname from emp e,dept d where e.deptno = d.deptno </p>
+</blockquote>
+</li>
+<li><p>第二种写法：inner join…on</p>
+<blockquote>
+<p>eg:select e.empno,e.ename,e.deptno,d.deptno,d.dname from emp e <u>inner join</u>  dept d <u>on</u> e.deptno = d.deptno;</p>
+</blockquote>
+</li>
+<li><p>不等值连接：可以实现，但是意义不大，一般不使用，仅作为了解；</p>
+</li>
+</ul>
+</li>
+<li><p>外连接：</p>
+<ul>
+<li><p>左外连接：以左表为基准去匹配右表数据，如果匹配成功则显示数据，匹配不成功则只显示左表数据；</p>
+<blockquote>
+<p>另一个角度理解：左表数据全部显示，右表通过相同字段和左表匹配，如果匹配成功，右表数据就显示</p>
+</blockquote>
+<ul>
+<li><p>第一种写法：(oracle独有的方法，mysql没有)  +</p>
+<blockquote>
+<p>eg:select e.empno,e.ename,e.deptno,d.deptno,d.dname from emp e,dept d where e.deptno = d.deptno(+) ;//左外连接，加号在右边；</p>
+<p>注意事项：当左表的e.deptno 匹配多个右表的 d.deptno时，左表的e.deptno数据应同样显示多条，来匹配完右表的d.deptno;</p>
+</blockquote>
+</li>
+<li><p>第二种写法:left outer join…on</p>
+<blockquote>
+<p>eg:select e.empno,e.ename,e.deptno,d.deptno,d.dname from emp e left outer join  dept d on e.deptno = d.deptno;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>右外连接：以右表为基准去匹配左表数据，如果匹配成功则显示数据，匹配不成功则只显示右表数据；</p>
+<blockquote>
+<p>写法同右外连接</p>
+<p>eg(第一种):select e.empno,e.ename,e.deptno,d.deptno,d.dname from emp e,dept d where e.deptno(+) = d.deptno ;//右外连接，加号在左边；</p>
+</blockquote>
+</li>
+<li><p>全外连接：左外连接+右外连接+去重；只有一种写法；full join…on</p>
+<blockquote>
+<p>eg：select e.empno,e.ename,e.deptno,d.deptno,d.dname from emp e full join  dept d on e.deptno = d.deptno;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>自连接：一张表内，两个字段存在包含关系时，将两个字段联系起来，称作自连接；如员工表emp,员工有领导，领导也是员工；</p>
+<blockquote>
+<p>eg:select e.ename 员工，b.ename 领导 from emp e,emp b where e.mgr = b.empno;</p>
+<p>注：此种方式自连接效率较低，比较耗性能，因为相当于两张表进行内连接；</p>
+<p>优化：使用层次连接:connect by prior 下层=上层 startwith 当前节点 = 当前节点的上层节点的值</p>
+<p>eg:select level,empno,ename,mgr from emp connect by prior empno=mgr start with mgr is null order by level;</p>
+</blockquote>
+</li>
+<li><p>全值连接：权值连接是一种补救的方法，当两张表没有通过主键和外键关系时，我们可以通过对所有的值进行连接比较，如果比较结果都相等，则可以认为两张表中的两条数据指向的是同一个目标；</p>
+<blockquote>
+<p>例题：查询每种工作的最低工资，以及领取该工资的员工姓名。</p>
+<p>eg:select t.minsal,t.job,e.ename from emp e,(select min(sal) minsal,job from emp group by job) t where t.minsal=e.sal and t.job=e.job</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="六、子查询"><a href="#六、子查询" class="headerlink" title="六、子查询"></a>六、子查询</h1><blockquote>
+<p>定义：当一个查询是另一个查询的条件时，称之为子查询；</p>
+</blockquote>
+<ul>
+<li><p>1、子查询可以出现的位置：where、from、select、having；不能写在group by后面；</p>
+<blockquote>
+<p>eg:</p>
+<p>​    select：select empno,ename,(select job from emp where empno = 7839) from emp;</p>
+<p>​    注：子查询在select后面时，子查询的结果只能是常量</p>
+<p>​    having:select deptno,min(sal) from emp group by deptno having min(sal)&gt;(select min(sal) from emp where deptno= 20);//查询最低工资比20号部门最低工资高的部门；</p>
+<p>​    from(相当于修改了表结构):select *from (select empno,ename,job from emp);</p>
+</blockquote>
+</li>
+<li><p>2、主查询和子查询可以是，也可以查询的不是同一张表；</p>
+<blockquote>
+<p>eg:select *from emp where deptno =(select deptno from dept where deptno = 20 );</p>
+</blockquote>
+</li>
+<li><p>3、子查询可以使用单行操作符（&gt;、=），也可以使用多行操作符(in)；</p>
+<ul>
+<li><p>单行操作符：类似于&gt;、=、&lt;这种，只对一个数字进行判断</p>
+<blockquote>
+<p>eg:select *from emp where sal&gt;(select min(sal) from emp where deptno = 30);</p>
+<p>eg:select *from emp where sal&gt;(select max(sal) from emp where deptno = 30);</p>
+<p>另一种写法：any,表示任意一个;all,表示全部</p>
+<p>eg:select *from emp where sal&gt; any(select sal from emp where deptno = 30);</p>
+<p>eg:select *from emp where sal&gt; all(select sal from emp where deptno = 30);</p>
+</blockquote>
+</li>
+<li><p>多行操作符：类似于in，对多个数字进行判断；如：in (10,20,30);//表示值在这三个数的范围内</p>
+<blockquote>
+<p>eg:select *from emp where deptno in(20,30);//查询部门编号为20或30的数据</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>4、子查询中的nulla：子查询的结果不要有null;</p>
+<blockquote>
+<p>前提必知：null和任何值做运算的结果都是null</p>
+</blockquote>
+<ul>
+<li><p>1、在in中存在null时；</p>
+<blockquote>
+<p>in想当于对括号里的值做或运算，因此，如果存在null，不会对其他的值产生影响；</p>
+<p>eg:select deptno from emp where deptno in(10,20,null);</p>
+<p>翻译……where deptno=10 or deptno=20 or deptno=null；这里deptno=null的结果为null，但因为是用or关系，所以对另外两个值不产生影响；</p>
+</blockquote>
+</li>
+<li><p>2、在not in中存在null时；</p>
+<blockquote>
+<p>not in 相当于对括号里的值做于运算，因此，如果存在null，会对其他的值产生影响；</p>
+<p>eg:select deptno from emp where deptno not in(10,20,null);</p>
+<p>翻译……where deptno!=10 and deptno!=20 and deptno!=null；这里deptno=null的结果为null，但因为是用and关系，所欲和另为两个值做与运算，也变成了null，所有查询结果为null;</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>重点：解决子查询结果又null的情况，其实很简单，用 is not null</p>
+<blockquote>
+<p>eg:select empno from emp where empno in(select mgr  from emp where mgr is not null);//查询不是领导的员工编号</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>5、一般不在子查询中排序，因为排序一般是为了看着方便，子查询的结果不显示，只有主查询的数据才显示，所以在子查询中排序没有意义；除非TOP-N问题（分页）；</p>
+</li>
+</ul>
+<h1 id="七、伪列（rownum和rowid）"><a href="#七、伪列（rownum和rowid）" class="headerlink" title="七、伪列（rownum和rowid）"></a>七、伪列（rownum和rowid）</h1><blockquote>
+<p>定义：不属于任何一张表，但是会被所有的表所共享</p>
+<p>eg:select *from emp;查询emp表所有列结果没有rownum和rowid两列，但是</p>
+<p>eg:select rownum，rowid ，e.*from emp e;但是查询这两列却能查询出来；</p>
+<p>注：rownum和rowid都是顺序自增的</p>
+</blockquote>
+<ul>
+<li><p>rownum:逻辑伪列</p>
+<ul>
+<li><p>不同SQL语句在执行时，rownum的值不一致；即，在不同的SQL里执行时，每个rownum互不干扰；</p>
+</li>
+<li><p>在相同的SQL语句里执行时，rownum的值不变，即，rownum在最初获得时标志了某一行，之后，无论怎么操作，rownum都跟随某一行；</p>
+<blockquote>
+<p>问题：面对获取工资前的员工时，可利用rownum&lt;=3来获取；但是不能直接使用</p>
+<p>解析：错误写法：select rownum，sal from emp where rownum &lt;3 order by sal;//此种方法是错误的，因为，因为rownum已经标志了每一行，此时对sal倒叙排序，rownum中的1、2、3指向的还是最初标志的前三条数据；</p>
+<p>正确解法：利用子查询构建临时表，并对临时表排序；此时临时表为sal倒叙，然后主查询 查询临时表，给临时表标志rownum，此时rownum标志的sal为倒叙，然后获取前三个rownum，即获取到前三个工资</p>
+<p>eg:select rownum,sal from(select sal from emp where sal is not null  order by sal desc) where rownum &lt;=3 ;</p>
+<p>注：从这个例子可以得到TOP-N问题的套路解法</p>
+<p>select rownum,… from(select *from XXX order by…) where rownum&lt;=n</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>rowid：物理伪列</p>
+<blockquote>
+<p>问题：删除表中重复的数据</p>
+<p>注：只能使用numid删除，因为numid是物理伪列，标志的是数据的物理地址，无论是不是在同一条SQL语句里，numid都保持一致；而对于rownum，rownum能参与关系运算，但只能=1、&lt;、&lt;=关系运算，其他则无值。</p>
+<p>eg:delete from student2 where rowid not in(select min(rowid) from student2 group by stuno);</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="八、联合查询"><a href="#八、联合查询" class="headerlink" title="八、联合查询"></a>八、联合查询</h1><ul>
+<li><p>UNION(并集):返回各个查询的所有记录，不包括重复记录。</p>
+</li>
+<li><p>UNION ALL(并集):返回各个查询的所有记录，包括重复记录。</p>
+</li>
+<li><p>INTERSECT(交集)：返回两个查询共有的记录。</p>
+</li>
+<li><p>MINUS(差集)：返回 包含在第一个查询中，但不包含在第二个查询中的记录。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意事项：联合查询时，各个集合的列数、类型必须保持一致</p>
+<p>如果列数和类型一致，但是列的名称不同，则查询结果只显示第一个集合的列名，其余集合列名不显示；</p>
+</blockquote>
 
       
 
@@ -351,7 +855,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/25/oracle%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -365,18 +869,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/06/29/SpringBoot%E7%AC%94%E8%AE%B0+/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/25/oracle%E4%B9%A0%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          SpringBoot笔记+
+          oracle习题
         
       </div>
     </a>
   
   
-    <a href="/2020/06/07/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字符串常用方法</div>
+    <a href="/2020/10/25/%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%AE%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在线聊天室</div>
       <i class="icon-circle-right"></i>
     </a>
   

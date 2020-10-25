@@ -6,26 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SSM整合 | Hexo</title>
+  <title>jquery | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[TOC]  一、前言1、Spring家族的所有框架都是Spring整合其它框架，即将其它框架整入Spring，将其它框架的管理权交给Spring 2、SSM整合先整合Spring和Mybatis,然后整合Spring和SpringMVC 3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring 4、Spring整合SpringMVC原理：将S">
+  <meta name="description" content="一、前瞻 jquery分为压缩版和非压缩版，后缀有min的就是压缩版；压缩版叫  导入jquery，   注：导入jquery一定要以结尾，而不能以自身结尾   初始化函数：当网页中的dom元素（不包含图片、视频、资源）全部加装完毕后，立即执行  语法：$(document).ready(function(){ }) 简化写法：$(function(){ })   $:该符号代表jquery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSM整合">
-<meta property="og:url" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/index.html">
+<meta property="og:title" content="jquery">
+<meta property="og:url" content="http://yoursite.com/2020/10/25/jquery/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[TOC]  一、前言1、Spring家族的所有框架都是Spring整合其它框架，即将其它框架整入Spring，将其它框架的管理权交给Spring 2、SSM整合先整合Spring和Mybatis,然后整合Spring和SpringMVC 3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring 4、Spring整合SpringMVC原理：将S">
+<meta property="og:description" content="一、前瞻 jquery分为压缩版和非压缩版，后缀有min的就是压缩版；压缩版叫  导入jquery，   注：导入jquery一定要以结尾，而不能以自身结尾   初始化函数：当网页中的dom元素（不包含图片、视频、资源）全部加装完毕后，立即执行  语法：$(document).ready(function(){ }) 简化写法：$(function(){ })   $:该符号代表jquery">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614193044781.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614202423417.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614211522655.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215059446.png">
-<meta property="og:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215149757.png">
-<meta property="article:published_time" content="2020-06-15T03:06:28.000Z">
-<meta property="article:modified_time" content="2020-10-08T07:02:00.102Z">
+<meta property="article:published_time" content="2020-10-25T08:20:33.506Z">
+<meta property="article:modified_time" content="2020-10-25T08:21:19.657Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -161,117 +154,442 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SSM整合" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-jquery" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SSM整合
+      jquery
     </h1>
   
 
         
-        <a href="/2020/06/15/SSM%E6%95%B4%E5%90%88/" class="archive-article-date">
-  	<time datetime="2020-06-15T03:06:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-15</time>
+        <a href="/2020/10/25/jquery/" class="archive-article-date">
+  	<time datetime="2020-10-25T08:20:33.506Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[TOC]</p>
-<hr>
-<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>1、Spring家族的所有框架都是Spring整合其它框架，即将其它框架整入Spring，将其它框架的管理权交给Spring</p>
-<p>2、SSM整合先整合Spring和Mybatis,然后整合Spring和SpringMVC</p>
-<p>3、Spring整合Mybatis原理：将Mybatis的SqlSessionFactory 交给Spring</p>
-<p>4、Spring整合SpringMVC原理：将Spring和SpringMVC各自配置一遍</p>
+        <h1 id="一、前瞻"><a href="#一、前瞻" class="headerlink" title="一、前瞻"></a>一、前瞻</h1><ul>
+<li><p>jquery分为压缩版和非压缩版，后缀有min的就是压缩版；压缩版叫</p>
+</li>
+<li><p>导入jquery，<script type="text/javascript" src="jquery文件相对路径"> </script></p>
+<blockquote>
+<p>注：导入jquery一定要以结尾，而不能以自身结尾</p>
+</blockquote>
+</li>
+<li><p>初始化函数：当网页中的dom元素（不包含图片、视频、资源）全部加装完毕后，立即执行</p>
+<blockquote>
+<p>语法：$(document).ready(function(){</p>
+<p>})</p>
+<p>简化写法：$(function(){</p>
+<p>})</p>
+</blockquote>
+</li>
+<li><p>$:该符号代表jquery</p>
+</li>
+</ul>
 <a id="more"></a>
 
-<h1 id="二、Spring和Mybatis整合步骤"><a href="#二、Spring和Mybatis整合步骤" class="headerlink" title="二、Spring和Mybatis整合步骤"></a>二、Spring和Mybatis整合步骤</h1><p>1、创建一个Web项目，导入Spring和Mybatis所需的jar包</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614192916369.png" alt="image-20200614192916369"></p>
-<p>2、创建一个 实体类 和 实体类对应的表</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614193044781.png" alt="image-20200614193044781"></p>
-<p>3、将Mybatis的conf.xml文件中的 数据源和mapper.xml路径 配置在Spring的配置文件 applicationContext.xml</p>
-<p>db.properties</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">driver&#x3D;oracle.jdbc.OracleDriver</span><br><span class="line">url&#x3D;jdbc:oracle:thin:@127.0.0.1:1521:ORCL</span><br><span class="line">username&#x3D;scott</span><br><span class="line">password&#x3D;tiger</span><br><span class="line">maxActive&#x3D;10</span><br><span class="line">maxIdle&#x3D;6</span><br></pre></td></tr></table></figure>
-
-<p>applicationContext.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 加载db.properties配置文件 --&gt;</span><br><span class="line">	&lt;bean id&#x3D;&quot;config&quot; class&#x3D;&quot;org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer&quot;&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;locations&quot;&gt;</span><br><span class="line">			&lt;array&gt;</span><br><span class="line">				&lt;value&gt;classpath:db.properties&lt;&#x2F;value&gt;</span><br><span class="line">			&lt;&#x2F;array&gt;</span><br><span class="line">		&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br><span class="line">	&lt;!-- 配置数据源 --&gt;</span><br><span class="line">	&lt;bean id&#x3D;&quot;dataSource&quot; class&#x3D;&quot;org.apache.commons.dbcp.BasicDataSource&quot;&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;property name&#x3D;&quot;driverClassName&quot; value&#x3D;&quot;$&#123;driver&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;url&quot; value&#x3D;&quot;$&#123;url&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;username&quot; value&#x3D;&quot;$&#123;username&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;password&quot; value&#x3D;&quot;$&#123;password&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;maxActive&quot; value&#x3D;&quot;$&#123;maxActive&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;maxIdle&quot; value&#x3D;&quot;$&#123;maxIdle&#125;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- 在SpringIOC容器中 创建MyBatis的核心类SqlSessionFactory --&gt;</span><br><span class="line">	&lt;bean id&#x3D;&quot;sqlSessionFactory&quot; class&#x3D;&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;property name&#x3D;&quot;dataSource&quot; ref&#x3D;&quot;dataSource&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	</span><br><span class="line">		&lt;!-- 直接通过springIoc配置mapper路径，省略了conf.xml文件 --&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;mapperLocations&quot; value&#x3D;&quot;classpath*:org&#x2F;lanqiao&#x2F;mapper&#x2F;*.xml&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;bean id&#x3D;&quot;mappers&quot; class&#x3D;&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;sqlSessionFactoryBeanName&quot; value&#x3D;&quot;sqlSessionFactory&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">		&lt;!-- 指定批量产生哪个包的mapper --&gt;</span><br><span class="line">		&lt;!-- 将对应包内的接口，纳入springIoc容器中 生成动态代理对象，如果要引用该接口产生的动态代理对象</span><br><span class="line">			则通过id值引用，且该id值默认为 首字母小写的接口名</span><br><span class="line">		 --&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;basePackage&quot; value&#x3D;&quot;org.lanqiao.mapper&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
-
-<p>4、创建mapper.xml映射文件，将类和表建立映射关系;同时创建对应的Mapper接口，以便产生动态代理对象；且两者应该放在同一个包里</p>
-<p>mapper.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper </span><br><span class="line">SYSTEM &quot;C:&#x2F;&#x2F;Users&#x2F;&#x2F;HeiQi&#x2F;&#x2F;Desktop&#x2F;&#x2F;MyBatis配套资料&#x2F;&#x2F;mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;mapper namespace&#x3D;&quot;org.lanqiao.mapper.StudentMapper&quot;&gt;</span><br><span class="line">	&lt;select id&#x3D;&quot;queryStudentByStuno&quot; parameterType&#x3D;&quot;int&quot; resultType&#x3D;&quot;org.lanqiao.entity.Student&quot;&gt;</span><br><span class="line">		select * from student where stuno &#x3D; #&#123;stuNo&#125;</span><br><span class="line">	&lt;&#x2F;select&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;insert id&#x3D;&quot;addStudent&quot; parameterType&#x3D;&quot;org.lanqiao.entity.Student&quot;&gt;</span><br><span class="line">		insert into Student(stuno,stuname,stuage) values(#&#123;stuNo&#125;,#&#123;stuName&#125;,#&#123;stuAge&#125;) </span><br><span class="line">	&lt;&#x2F;insert&gt;</span><br><span class="line">&lt;&#x2F;mapper&gt;</span><br></pre></td></tr></table></figure>
-
-<p>studentMapper.java</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">package org.lanqiao.mapper;</span><br><span class="line"></span><br><span class="line">import org.lanqiao.entity.Student;</span><br><span class="line"></span><br><span class="line">public interface StudentMapper &#123;</span><br><span class="line">	void addStudent(Student student);</span><br><span class="line">	Student queryStudentByStuno(int stuNo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>5、以上已经将Mybatis整合入Spring中，现在将Spring纳入web项目中：这里可以通过Alt+/，再按上方向键快速找到ContextLoaderListener，在将param-value标签内修改为Spring配置文件在项目中的相对路径，其中 ，classpath相当于src下</p>
-<p>web.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 将spring配置文件纳入web项目 ，ContextLoaderListener--&gt;</span><br><span class="line">&lt;context-param&gt;</span><br><span class="line">	&lt;param-name&gt;contextConfigLocation&lt;&#x2F;param-name&gt;</span><br><span class="line">	&lt;param-value&gt;classpath:applicationContext.xml&lt;&#x2F;param-value&gt;</span><br><span class="line">&lt;&#x2F;context-param&gt;</span><br><span class="line">&lt;listener&gt;</span><br><span class="line">	&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;&#x2F;listener-class&gt;</span><br><span class="line">&lt;&#x2F;listener&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="三、Spring和SpringMVC整合步骤"><a href="#三、Spring和SpringMVC整合步骤" class="headerlink" title="三、Spring和SpringMVC整合步骤"></a>三、Spring和SpringMVC整合步骤</h1><p>1、加入SpringMVC所需jar包</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614202423417.png" alt="image-20200614202423417"></p>
-<p>2、给项目加入SpringMVC支持</p>
-<p>web.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置SpringMVC核心类，给项目加入SpringMVC支持 --&gt;</span><br><span class="line">	&lt;servlet&gt;</span><br><span class="line">		&lt;servlet-name&gt;springDispatcherServlet&lt;&#x2F;servlet-name&gt;</span><br><span class="line">		&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;&#x2F;servlet-class&gt;</span><br><span class="line">		&lt;init-param&gt;</span><br><span class="line">			&lt;param-name&gt;contextConfigLocation&lt;&#x2F;param-name&gt;</span><br><span class="line">			&lt;param-value&gt;classpath:applicationContext-controller.xml&lt;&#x2F;param-value&gt;</span><br><span class="line">		&lt;&#x2F;init-param&gt;</span><br><span class="line">		&lt;load-on-startup&gt;1&lt;&#x2F;load-on-startup&gt;</span><br><span class="line">	&lt;&#x2F;servlet&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 让SpringMVC拦截所有请求 --&gt;</span><br><span class="line">	&lt;servlet-mapping&gt;</span><br><span class="line">		&lt;servlet-name&gt;springDispatcherServlet&lt;&#x2F;servlet-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;&#x2F;&lt;&#x2F;url-pattern&gt;</span><br><span class="line">	&lt;&#x2F;servlet-mapping&gt;</span><br></pre></td></tr></table></figure>
-
-<p>3、编写SpringMVC配置文件applicationContext-Controller.xml</p>
 <ul>
-<li><p>配置视图解析器</p>
-<p>applicationContext-Controller.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置视图解析器 --&gt;</span><br><span class="line">&lt;bean class&#x3D;&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;</span><br><span class="line">	&lt;property name&#x3D;&quot;prefix&quot; value&#x3D;&quot;&#x2F;views&#x2F;&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;property name&#x3D;&quot;suffix&quot; value&#x3D;&quot;.jsp&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>SpringMVC的基本配置 、标配</p>
-<p>applicationContext-Controller.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;mvc:annotation-driven&gt;&lt;&#x2F;mvc:annotation-driven&gt;</span><br></pre></td></tr></table></figure>
-
-
-
+<li><p>dom模型：将html xml 等标签语言构建的结构 看成dom模型</p>
+<ul>
+<li>dom模型由dom节点（<html>、<body>、<ul>、…)构成</ul></body></html></li>
+<li>dom节点有三种类型：<ul>
+<li>元素节点 ：<html> <ul> <p>…</p></ul></html></li>
+<li>属性节点:title、src、text…</li>
+<li>文本节点：如：<p> 文本节点</p>，p标签内的就是文本节点</li>
+</ul>
 </li>
 </ul>
-<h1 id="四、简单应用"><a href="#四、简单应用" class="headerlink" title="四、简单应用"></a>四、简单应用</h1><p>注：采用三层架构</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614211522655.png" alt="image-20200614211522655"></p>
-<p>1、service层</p>
+</li>
+<li><p>dom对象：</p>
 <ul>
-<li>创建service类，接口这里省略展示:StudentServiceImpl.java</li>
+<li>以上三种节点类型的具体对象 就是Dom对象，</li>
+<li>使用层面解释：凡是JavaScript能够直接操作的对象，就是Dom对象</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package org.lanqiao.service.impl;</span><br><span class="line"></span><br><span class="line">import org.lanqiao.entity.Student;</span><br><span class="line">import org.lanqiao.mapper.StudentMapper;</span><br><span class="line">import org.lanqiao.service.StudentService;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line">public class StudentServiceImpl implements StudentService&#123;</span><br><span class="line">	private StudentMapper studentMapper;&#x2F;&#x2F;通过Spring产生对象</span><br><span class="line">	public void setStudentMapper(StudentMapper studentMapper) &#123;&#x2F;&#x2F;采用set注入，因此需添加set方法</span><br><span class="line">		this.studentMapper &#x3D; studentMapper;</span><br><span class="line">	&#125;</span><br><span class="line">	@Override</span><br><span class="line">	public void addStudent(Student student) &#123;</span><br><span class="line">		studentMapper.addStudent(student);</span><br><span class="line">	&#125;</span><br><span class="line">	@Override</span><br><span class="line">	public Student queryStudentByStuno(int stuNo) &#123;</span><br><span class="line">		return studentMapper.queryStudentByStuno(stuNo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+</li>
+<li><p>jquery对象：</p>
 <ul>
-<li><p>将StudentServiceImpl注入Ioc容器：applicationContext.xml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id&#x3D;&quot;studentService&quot; class&#x3D;&quot;org.lanqiao.service.impl.StudentServiceImpl&quot;&gt;</span><br><span class="line">		&lt;property name&#x3D;&quot;studentMapper&quot; ref&#x3D;&quot;studentMapper&quot;&gt;&lt;&#x2F;property&gt;</span><br><span class="line">&lt;&#x2F;bean&gt;</span><br></pre></td></tr></table></figure>
-
-
-
+<li>凡是jquery能够直接操作的对象，就是jquery对象</li>
+<li>同样一个元素，既可以称为dom对象（javascript对象），也可以成为一个jquery对象</li>
+<li>dom对象 只适用于js的各种语法（函数、属性），jquery对象只适用于jquery的各种语法（函数、属性）。dom对象和jquery对象各自独立。</li>
+</ul>
+</li>
+<li><p>dom对象和jquery对象的转换：</p>
+<ul>
+<li><p>dom对象-&gt;jquery对象：jquery工厂</p>
+<blockquote>
+<p>语法：$(dom对象)</p>
+</blockquote>
+</li>
+<li><p>jquery对象-&gt;dom对象：</p>
+<ul>
+<li>前提知识：jquery对象默认是一个数组 或集合；dom对象默认是一个单独的对象</li>
+</ul>
+<blockquote>
+<p>语法：jquery对象[0]</p>
+<p>或       jquery对象.get(0)</p>
+</blockquote>
 </li>
 </ul>
-<p>2、UI层-前端jsp</p>
-<p>index.jsp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language&#x3D;&quot;java&quot; contentType&#x3D;&quot;text&#x2F;html; charset&#x3D;UTF-8&quot;</span><br><span class="line">    pageEncoding&#x3D;&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;a href&#x3D;&quot;controller&#x2F;queryStudentByNo&#x2F;1&quot; &gt;查询1号学生&lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
-<p>/views/result.jsp</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language&#x3D;&quot;java&quot; contentType&#x3D;&quot;text&#x2F;html; charset&#x3D;UTF-8&quot;</span><br><span class="line">    pageEncoding&#x3D;&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	$&#123;requestScope.student.stuNo &#125;-</span><br><span class="line">	$&#123;requestScope.student.stuName &#125;-</span><br><span class="line">	$&#123;requestScope.student.stuAge &#125;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3、UI层-后端Servlet(控制器Controller)</p>
-<ul>
-<li>控制器：studentController.java（注解需要配置扫描器，才能够识别；@Controller已经将StudentController注入Ioc容器中，切记别在Spring配置文件中再次 注入）</li>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package org.lanqiao.controller;</span><br><span class="line"></span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">import org.lanqiao.entity.Student;</span><br><span class="line">import org.lanqiao.mapper.StudentMapper;</span><br><span class="line">import org.lanqiao.service.StudentService;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Controller;</span><br><span class="line">import org.springframework.web.bind.annotation.PathVariable;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Controller&#x2F;&#x2F;注解需要配置扫描器，才能够识别</span><br><span class="line">		  &#x3D;&#x3D;&#x2F;&#x2F;@Controller已经将StudentController注入Ioc容器中，切记别在Spring配置文件中再次 注入&#x3D;&#x3D;</span><br><span class="line">@RequestMapping(&quot;controller&quot;)</span><br><span class="line">public class StudentController &#123;</span><br><span class="line">	@Autowired&#x2F;&#x2F;通过注解的形式，注入属性</span><br><span class="line">	StudentService studentService;</span><br><span class="line">	</span><br><span class="line">	public void setStudentService(StudentService studentService) &#123;</span><br><span class="line">		this.studentService &#x3D; studentService;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	@RequestMapping(&quot;queryStudentByNo&#x2F;&#123;stuNo&#125;&quot;)</span><br><span class="line">	public String queryStudentByNo(@PathVariable(&quot;stuNo&quot;) Integer stuNo,Map&lt;String,Object&gt; map) &#123;</span><br><span class="line">		Student student &#x3D; studentService.queryStudentByStuno(stuNo);</span><br><span class="line">		map.put(&quot;student&quot;, student);</span><br><span class="line">		System.out.println(student.getStuNo()+&quot;-&quot;+student.getStuName()+&quot;-&quot;+student.getStuAge());</span><br><span class="line">		return &quot;result&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h1 id="二、Jquery选择器"><a href="#二、Jquery选择器" class="headerlink" title="二、Jquery选择器"></a>二、Jquery选择器</h1><ul>
+<li><p>jquery选择器是jquery的根基</p>
+</li>
+<li><p>jquery选择器分类</p>
 <ul>
-<li>配置扫描器：applicationContext-Controller.xml</li>
+<li>1、基本选择器</li>
+<li>2、层次选择器</li>
+<li>3、属性选择器</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 配置扫描器 --&gt;</span><br><span class="line">&lt;context:component-scan base-package&#x3D;&quot;org.lanqiao.controller&quot;&gt;&lt;&#x2F;context:component-scan&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>基本选择器：</p>
+<ul>
+<li><p>标签选择器：$(“标签名”)//标签选择器使用语法</p>
+<blockquote>
+<p>$(“p”).html()  //获取p标签对象，是jquery对象形式的</p>
+<p>$(“p”).length  //获取jquery对象长度</p>
+</blockquote>
+</li>
+<li><p>类选择器：$(“.class名”)</p>
+</li>
+<li><p>id选择器：$(“#id名”)</p>
+</li>
+<li><p>并集选择器（或）：逗号</p>
+<blockquote>
+<p>语法：$(“.class名，#id名”)</p>
+</blockquote>
+</li>
+<li><p>交集选择器（同时存在）： 直接写</p>
+<blockquote>
+<p>语法：$(“标签名id名”)</p>
+<p>注：注意不要出现歧义</p>
+<p>$(“p#hello”)  //没有歧义，p标签里id值为hello</p>
+<p>$(“#hellop”)  //有歧义，被认定为id值为hellop</p>
+</blockquote>
+</li>
+<li><p>全局选择器：$(“*”) //选中一切元素</p>
+</li>
+</ul>
+</li>
+<li><p>层次选择器</p>
+<ul>
+<li><p>相邻选择器（只取后面的元素）： +  ，$(“选择器1+选择器2”)</p>
+<blockquote>
+<p>$(“选择器1+选择器2”) //选取选择器1后面相邻的选择器2</p>
+<p>eg:$(“#hello+h1”).html()</p>
+</blockquote>
+</li>
+<li><p>同辈选择器（只取后面的元素）:~  , $(“选择器1~选择器2”)</p>
+<blockquote>
+<p>$(“选择器1~选择器2”) //选取选择器1后面同一层次的选择器2</p>
+<p>eg:$(“#hello~h1”).html()</p>
+</blockquote>
+</li>
+<li><p>后代选择器：空格 ， $(“选择器1 选择器2”)</p>
+</li>
+<li><p>子代选择器：&gt;   ， $(“选择器1&gt;选择器2”)</p>
+</li>
+</ul>
+</li>
+<li><p>属性选择器:</p>
+<ul>
+<li><p>$(“[属性名]”)</p>
+<blockquote>
+<p>eg:$(“[name]”) ：选中全部元素中 有那么属性的 元素</p>
+<p>eg:$(“input[type=text]”)；  //属性选择器可以配合基本选择器使用</p>
+</blockquote>
+</li>
+<li><p>$(“[属性名=属性值]”)   //选中 属性名=属性值 的元素</p>
+</li>
+<li><p>$(“[属性名!=属性值]”)   //选中 属性名!=属性值 的元素,没有class也叫不等于</p>
+</li>
+<li><p>$(“[class^=a]”)  class以a开头的元素</p>
+</li>
+<li><p>$(“[class$=a]”)  class以a结尾的元素</p>
+</li>
+<li><p>$(“[class*=a]”)  class有a的元素</p>
+</li>
+</ul>
+</li>
+<li><p>过滤选择器：使用符号 ：</p>
+<ul>
+<li>:first：最开头的那一个</li>
+<li>:last：最后的那一个</li>
+<li>:even：偶数</li>
+<li>:odd：奇数</li>
+<li>eq(index)：第index个</li>
+<li>gt(index)：&gt;index的全部元素</li>
+<li>lt(index)：&lt;index的所有元素</li>
+<li>not(选择器)：除了 选择器 的所有元素</li>
+<li>header ：选中所有的标题元素 h1 h2</li>
+<li>focus：获取当前焦点的元素</li>
+</ul>
+<blockquote>
+<p>注：过滤选择器的一些方法 和其他函数类型，例如$(“ul&gt;li:first”)等价于$(“ul&gt;li”)。first()有些不同，例如，$(“ul&gt;li:odd”)，正确；$(“ul&gt;li”).odd()，错误</p>
+</blockquote>
+<ul>
+<li>可见性选择器：  :visible</li>
+<li>不可见选择器：  :hidden</li>
+</ul>
+</li>
+</ul>
+<h1 id="三、Jquery事件"><a href="#三、Jquery事件" class="headerlink" title="三、Jquery事件"></a>三、Jquery事件</h1><blockquote>
+<p>语法：$(“选择器”).事件类型(function(){</p>
+<p>})</p>
+</blockquote>
+<ul>
+<li><p>事件分类：</p>
+<ul>
+<li><p>windows事件：当刷新窗口的时候执行</p>
+<ul>
+<li>ready() ：当网页中的dom元素（不包含图片、视频、资源）全部加装完毕后，立即执行</li>
+</ul>
+</li>
+<li><p>鼠标事件：</p>
+<blockquote>
+<p>通常来说，jquery事件和javascript事件就是一个on的区别，js事件前面带no</p>
+</blockquote>
+<ul>
+<li>click():鼠标单击事件，鼠标单击时执行</li>
+<li>mouseover()：鼠标悬浮事件，鼠标悬浮时触发</li>
+<li>mouseout():鼠标离开事件，鼠标离开时触发</li>
+</ul>
+<blockquote>
+<p>jquery支持链式写法：</p>
+<p>首先定义事件的方式是：获取到jquery对象，然后给jquery对象添加事件，最后返回值还是这个获取到的jquery对象，所以可以继续给jquery对象添加事件</p>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).mouseover(function () &#123;</span><br><span class="line">    $(&quot;div&quot;).css(&quot;background&quot;,&quot;dodgerblue&quot;)</span><br><span class="line">&#125;).mouseout(function () &#123;</span><br><span class="line">    $(&quot;div&quot;).css(&quot;background&quot;,&quot;red&quot;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>键盘事件：</p>
+<ul>
+<li>keydown():按键 从上往下的 过程 被处罚</li>
+<li>keypress():按键被压到最底部时 触发</li>
+<li>keyup():松开按键 时触发</li>
+</ul>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;body&quot;).keydown(function (event) &#123;</span><br><span class="line">    if(event.keyCode&#x3D;&#x3D;32)&#123;</span><br><span class="line">        alert(&quot;空格&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">    if(event.keyCode&#x3D;&#x3D;13)&#123;</span><br><span class="line">        alert(&quot;回车&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>表单事件</p>
+<ul>
+<li>focus():获取焦点</li>
+<li>blur():失去焦点</li>
+</ul>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;input&quot;).focus(function () &#123;</span><br><span class="line">    $(this).css(&quot;background&quot;,&quot;dodgerblue&quot;)</span><br><span class="line">&#125;).blur(function () &#123;</span><br><span class="line">    $(this).css(&quot;background&quot;,&quot;white&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>绑定事件与移除事件：绑定事件是给jquery对象添加事件的另一种写法</p>
+<ul>
+<li><p>绑定单个事件：$(…)bind(“事件名”,[数据],函数);</p>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;body&quot;).bind(&quot;keydown&quot;,function () &#123;</span><br><span class="line">    alert(&quot;bind...&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>批量绑定事件：$(…)bind({“事件名1”:[数据1]函数1,”事件名2”:[数据2]函数2});</p>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).bind(&#123;&quot;mouseover&quot;:function () &#123;</span><br><span class="line">    alert(&quot;mouseover...bind&quot;)</span><br><span class="line">&#125;,&quot;mouseout&quot;:function () &#123;</span><br><span class="line">    alert(&quot;mouseout...bind&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>移除事件：$(…).unbind(“事件名”)</p>
+</li>
+</ul>
+</li>
+<li><p>复合事件：指将多个function复合在一个function，一个function相当于多个function</p>
+<ul>
+<li><p>hover(f1,f2):切换mouseover()和mouseout</p>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#div1&quot;).hover(function () &#123;</span><br><span class="line">    alert(&quot;over&quot;)</span><br><span class="line">&#125;,function () &#123;</span><br><span class="line">    alert(&quot;out&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>toggle(f1,f2,f3,…fn)：每单击一次，就调用一个方法，从头到尾一次顺序调用，调用完后再从头调用，轮询。</p>
+<blockquote>
+<p>存在版本问题，jquery-1.9以下有效，当前1.8.3有效</p>
+</blockquote>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;body&quot;).toggle(function () &#123;</span><br><span class="line">    $(this).css(&quot;background&quot;,&quot;red&quot;)</span><br><span class="line">&#125;,function () &#123;</span><br><span class="line">    $(this).css(&quot;background&quot;,&quot;green&quot;)</span><br><span class="line">&#125;,function () &#123;</span><br><span class="line">    $(this).css(&quot;background&quot;,&quot;blue&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>toggle()配合show()和hide()实现显示隐藏效果</p>
+<ul>
+<li>show(速度，回调函数)；//速度单位是毫秒，速度可以是数字，也可以是单词（fast、normal、slow),要用双引号引起来</li>
+<li>回调函数：回调函数作为另一个函数的参数，当另一个函数执行完后，立马执行回调函数</li>
+</ul>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#bt&quot;).toggle(function () &#123;</span><br><span class="line">    $(&quot;h1&quot;).hide(2000,myCallBack);&#x2F;&#x2F;myCallBack是回调函数，回调函数作为另一个函数的参数，当另一个函数执行完后，立马执行回调函数</span><br><span class="line">    $(&quot;#bt&quot;).html(&quot;显示&quot;)</span><br><span class="line">&#125;,function () &#123;</span><br><span class="line">    $(&quot;h1&quot;).show(2000)</span><br><span class="line">    $(&quot;#bt&quot;).html(&quot;隐藏&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li>其他显示效果：这两种都可以调用回调函数</li>
+<li>fadeIn()和fadeout():淡入（显示）淡出（消失），改变透明度实现</li>
+<li>slideDown()和slideUp：下拉（显示）上拉（隐藏）,</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="四、Jquery操作Dom元素"><a href="#四、Jquery操作Dom元素" class="headerlink" title="四、Jquery操作Dom元素"></a>四、Jquery操作Dom元素</h1><ul>
+<li><p>操作样式</p>
+<ul>
+<li><p>1、css()</p>
+<blockquote>
+<p>语法：</p>
+<p>$(…).css(“…”,”…”);    //设置一个样式</p>
+<p>$(…).css({“样1”:”…”,”样2”:”…”})  //批量设置样式</p>
+<p>eg:</p>
+</blockquote>
+</li>
+<li><p>2、追加或移除样式</p>
+<ul>
+<li>addClass(“定义的样式集”);//增加一个样式集</li>
+<li>addClass(“样式集1 样式集2”)  //空格隔开，增加多个样式集</li>
+<li>removeClass(“拥有的样式集”);   //移除一个样式集</li>
+<li>removeClass(“样式集1 样式集2”)      //移除多个样式集</li>
+<li>removeClass()     //移除所有样式集</li>
+<li>toggleClass(“样式集1 样式集2”);   //切换追加与移除样式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>操作内容</p>
+<ul>
+<li>html():获取值，获取的是元素所有 的内容，包含了 元素内部的 各种标签</li>
+<li>html(“内容”)：如果内容有html语言会自动渲染，然后显示</li>
+<li>text()：只获取元素的文本值</li>
+<li>text(“内容”)：将元素原本的内容替换成括号内的内容，识别不出html语言，html语言只是文本</li>
+<li>val():获取value值</li>
+<li>val(“内容”)：设置value值</li>
+</ul>
+</li>
+<li><p>节点操作</p>
+<ul>
+<li><p>1、查询节点：（jquery选择器）</p>
+</li>
+<li><p>2、创建节点：$(“”)</p>
+<blockquote>
+<p>eg:$(“<li>xxx</li>“)   ;创建li节点</p>
+</blockquote>
+</li>
+<li><p>3、插入节点：见文档</p>
+<blockquote>
+<p>$(“选择器”).append(jquery对象)</p>
+</blockquote>
+</li>
+<li><p>4、替换节点</p>
+<ul>
+<li>$(“选择器”).replaceWith(xxx) :xxx可以为jquery对象，也可以是字符串，字符创里的HTML语言会自动渲染，这个函数和html()功能类似,</li>
+<li>replaceAll();与replaceWith()使用相反</li>
+</ul>
+</li>
+<li><p>5、删除节点</p>
+<ul>
+<li>remove():彻底删除</li>
+<li>detach():将节点删除，但关联的事件、数据不会删除（不推荐使用）</li>
+<li>empty():只删除内容</li>
+</ul>
+</li>
+<li><p>6、克隆节点</p>
+<ul>
+<li><p>clone(true|false)</p>
+<blockquote>
+<p>注：括号里参数为true，则克隆节点所有，包括事件</p>
+<p>false:只克隆节点本身，不克隆事件</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性操作</p>
+<ul>
+<li>attr(“属性名”):取属性值</li>
+<li>attr(“属性名”，”属性值”)：设置属性值</li>
+<li>attr({“属性名1”:”属性值2”,”属性名1”:”属性值2”,…})：批量设置属性值</li>
+<li>removeAttr(“属性名”)：删除属性</li>
+</ul>
+</li>
+<li><p>获取集合</p>
+<ul>
+<li>获取后辈集合<ul>
+<li>$(…).children(“li”):获取子节点集合</li>
+<li>$(…).find(“li”):获取后代集合，（不推荐使用，影响使用</li>
+</ul>
+</li>
+<li>获取同辈集合<ul>
+<li>next(“li”):选择后一个</li>
+<li>prev(“li”):选择前一个</li>
+<li>siblings(“li”)：选择同辈所有</li>
+</ul>
+</li>
+<li>获取前辈集合<ul>
+<li>parent(“li”):父辈集合</li>
+<li>parents(“li”):祖先集合</li>
+</ul>
+</li>
+<li>过滤集合<ul>
+<li>filter(“li”):只选择有li标签的节点</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>遍历集合</p>
+<blockquote>
+<p>$(“…”).each(function(可选项1，可选项2){      //可选项1表示当前元素是集合的第几个，可选项2表示当前元素</p>
+</blockquote>
+<p>alert($(this).html())    //this表示当前元素，和可选项2一样</p>
+<p>})</p>
+</li>
+<li><p>css-dom操作：</p>
+<ul>
+<li><p>height(500)：设置节点高500px</p>
+</li>
+<li><p>width(500):设置节点宽500px</p>
+</li>
+<li><p>offset():设置节点偏移量（左上角），left(横坐标),top（纵坐标）,要配合function使用</p>
+<blockquote>
+<p>eg:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $myDivOffset = $(<span class="string">"#divId2"</span>).offsset(<span class="function"><span class="keyword">function</span>(<span class="params">index,oldOffset</span>)</span>&#123;<span class="comment">//index第几个偏移量，oldOffset原来的偏移量对象</span></span><br><span class="line"><span class="keyword">var</span> newOffset = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">newOffset.left = oldOffset.left+<span class="number">100</span></span><br><span class="line">newOffset.top=oldOffset.top+<span class="number">100</span>;</span><br><span class="line"><span class="keyword">return</span> newOffset;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>4、运行测试</p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215059446.png" alt="image-20200614215059446"></p>
-<p><img src="/2020/06/15/SSM%E6%95%B4%E5%90%88/image-20200614215149757.png" alt="image-20200614215149757"></p>
+
+</blockquote>
+</li>
+<li><p>offsetParent():获取（已定位）的最近的祖先元素</p>
+<blockquote>
+<p>已定位：元素position元素(默认static)被设置为relative、absolute、或fixed</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>表单校验：可以减轻对服务器的访问次数</p>
+<ul>
+<li>1、获取要校验的元素值（选择器） </li>
+<li>2、通过 字符串处理方法 或者 正则表达式等手段 进行校验</li>
+<li>3、触发校验的方法或事件（校验时机）<ul>
+<li>blur():失去焦点时触发</li>
+<li>submit():当点击表单的 “提交submit”按钮时 触发</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -351,7 +669,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/15/SSM%E6%95%B4%E5%90%88/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/25/jquery/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -365,18 +683,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/06/29/SpringBoot%E7%AC%94%E8%AE%B0+/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          SpringBoot笔记+
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/06/07/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字符串常用方法</div>
+    <a href="/2020/10/25/%E7%BA%A6%E6%9D%9F-%E8%A7%86%E5%9B%BE-%E4%BA%8B%E5%8A%A1-%E7%B4%A2%E5%BC%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">约束-视图-事务-索引</div>
       <i class="icon-circle-right"></i>
     </a>
   
